@@ -44,6 +44,12 @@ body {
   font-weight: normal;
 }
 
+li
+{
+    list-style: none;
+}
+
+
 .map_marker:before, .money:before, .child:before, .heart:before, .dog:before, .infos:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
@@ -87,3 +93,4 @@ body {
   content: "i";
   margin-right: 5px;
 }
+

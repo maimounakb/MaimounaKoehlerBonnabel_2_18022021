@@ -50,7 +50,7 @@ li
 }
 
 
-.map_marker:before, .money:before, .child:before, .heart:before, .dog:before, .infos:before {
+.map_marker:before, .money:before, .child:before, .heart:before, .dog:before, .infos:before, .fleche:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
   speak: never;
@@ -94,3 +94,6 @@ li
   margin-right: 5px;
 }
 
+.fleche:before {
+    content: "a";
+}

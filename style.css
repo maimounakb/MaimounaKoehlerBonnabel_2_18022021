@@ -28,5 +28,9 @@ body
 {
     font-family: 'Raleway';
     font-weight: normal;
-    list-style-type: none;
+}
+
+li
+{
+    list-style: none;
 }

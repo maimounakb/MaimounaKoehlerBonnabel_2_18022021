@@ -8,23 +8,25 @@
 
   <body>
     <header>
-      <header>
-        <img src="images/logo/Reservia@3x.png" alt="logo" />
-        <nav>
+      <header id="entete">
+        <img src="images/logo/Reservia.svg" alt="logo" />
+        <nav id="menu">
           <a href="#hebergements">Hébergements</a>
           <a href="#activites">Activités</a>
           <a href="#">S'inscrire</a>
         </nav>
       </header>
       <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-      <h2>En plein centre ville ou en pleine nature</h2>
-      <div class="formulaire">
-        <div class="map_marker"></div>
-        <form></form>
-        <p>Rechercher</p>
-      </div>
-      <div class="filtres">
-        <p>Filtres</p>
+      <p>En plein centre ville ou en pleine nature</p>
+      <form method="post" action="traitement.php" id="formulaire">
+          <p>
+            <label for="lieu" class="map_marker"></label>
+            <input type="text" name="lieu" id="lieu" placeholder="Marseille, France" size=""/>
+            <label for="lieu">Rechercher</label>
+          </p>
+      </form>
+      <div id="filtres">
+        <p class="filtres">Filtres</p>
         <div class="filtre">
           <p class="money">Économique</p>
         </div>
@@ -48,32 +50,32 @@
           <h1>Hébergements à Marseille</h1>
           <div class="hebergements">
             <div class="bouton_h">
-              <h1>Auberge La Cannebière</h1>
+              <h2>Auberge La Cannebière</h2>
               <p>Nuit à partir de 25€</p>
               <!--Ajouter les étoiles-->
             </div>
             <div class="bouton_h">
-              <h1>Hôtel du port</h1>
+              <h2>Hôtel du port</h2>
               <p>Nuit à partir de 52€</p>
               <!--Ajouter les étoiles-->
             </div>
             <div class="bouton_h">
-              <h1>Hôtel Les mouettes</h1>
+              <h2>Hôtel Les mouettes</h2>
               <p>Nuit à partir de 76€</p>
               <!--Ajouter les étoiles-->
             </div>
             <div class="bouton_h">
-              <h1>Hôtel de la mer</h1>
+              <h2>Hôtel de la mer</h2>
               <p>Nuit à partir de 46€</p>
               <!--Ajouter les étoiles-->
             </div>
             <div class="bouton_h">
-              <h1>Auberge Le Panier</h1>
+              <h2>Auberge Le Panier</h2>
               <p>Nuit à partir de 23€</p>
               <!--Ajouter les étoiles-->
             </div>
             <div class="bouton_h">
-              <h1>Hôtel chez Amina</h1>
+              <h2>Hôtel chez Amina</h2>
               <p>Nuit à partir de 96€</p>
               <!--Ajouter les étoiles-->
             </div>
@@ -87,15 +89,15 @@
           </header>
           <div class="hebergement_p">
             <div class="bouton_h_p">
-              <h1>Hôtel Le soleil du matin</h1>
+              <h2>Hôtel Le soleil du matin</h2>
               <p>Nuit à partir de 128€</p>
             </div>
             <div class="bouton_h_p">
-              <h1>Au coeur de l'eau Chambres d'hôtes</h1>
+              <h2>Au coeur de l'eau Chambres d'hôtes</h2>
               <p>Nuit à partir de 71€</p>
             </div>
             <div class="bouton_h_p">
-              <h1>Hôtel Tout bleu et Blanc</h1>
+              <h2>Hôtel Tout bleu et Blanc</h2>
               <p>Nuit à partir de 68€</p>
             </div>
           </div>
@@ -103,12 +105,12 @@
       </section>
       <section id="activites">
         <h1>Activités à Marseille</h1>
-        <div>Vieux Port</div>
-        <div>Fort de Pomègues</div>
-        <div>Îles du Frioul</div>
-        <div>Parc National des calanques</div>
-        <div>Notre-Dame-de-la-Garde</div>
-        <div>Parc Longchamp</div>
+        <h2>Vieux Port</h2>
+        <h2>Fort de Pomègues</h2>
+        <h2>Îles du Frioul</h2>
+        <h2>Parc National des calanques</h2>
+        <h2>Notre-Dame-de-la-Garde</h2>
+        <h2>Parc Longchamp</h2>
       </section>
     </main>
 

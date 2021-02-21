@@ -39,17 +39,6 @@
   font-display: swap;
 }
 
-body {
-  font-family: "Raleway";
-  font-weight: normal;
-}
-
-li
-{
-    list-style: none;
-}
-
-
 .map_marker:before, .money:before, .child:before, .heart:before, .dog:before, .infos:before, .fleche:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
@@ -96,4 +85,70 @@ li
 
 .fleche:before {
     content: "a";
+}
+
+
+body {
+  font-family: "Raleway";
+  font-weight: normal;
+}
+
+h1 {
+  font-size: large;
+}
+
+h2 {
+  font-size: medium;
+  font-style: normal;
+}
+
+li
+{
+  list-style: none;
+}
+
+
+/*HEADER*/
+
+#entete {
+  display: flex;
+  justify-content: space-between;
+}
+
+#menu {
+  /*Revoir la taille et les marges*/
+  width:300px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-style:normal;
+  font-size:small;
+}
+
+#formulaire {
+  font-size:medium;
+  font-weight: bold;
+}
+
+#filtres {
+  display: flex;
+  justify-content: space-between;
+  max-width: 700px;
+  font-size: normal;
+  font-weight: bold;
+}
+
+.filtres {
+  margin: ;
+  padding: 10px;
+}
+
+.filtre {
+  padding: 10px;
+  border: 3px #f2f2f2 solid;
+}
+
+#hebergements {
+  display: flex;
+  justify-content: space-between;
 }

@@ -118,6 +118,16 @@ main p {
   font-size: small;
 }
 
+a {
+  text-decoration: none;
+}
+
+footer a {
+  color: black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 /*HEADER*/
 
 #entete {
@@ -138,15 +148,30 @@ main p {
 #formulaire {
   font-size: medium;
   font-weight: bold;
+  border: 2px black solid;
 }
 
+.map_marker:before {
+  background-color: #f2f2f2;
+  height: auto;
+  padding: 3px 3px 3px 3px;
+
+}
+
+.rechercher {
+  color: white;
+  background-color: #0065fc;
+  padding: 3px 10px 3px 10px;
+}
+
+/*barre de recherche du formulaire*/
 #lieu {
   height: auto;
   text-align: left;
   font-size: medium;
   font-weight: bold;
   color: black;
-  padding: 3px 10px 3px 3px;
+  padding: 3px 3px 3px 3px;
   border: 1px #f2f2f2 solid;
 }
 
@@ -213,6 +238,7 @@ main p {
   padding-right: 20px;
   background-color: #f2f2f2;
   border-radius: 10px;
+  margin-bottom: 30px;
 }
 
 /*HEBERGEMENTS MARSEILLE*/

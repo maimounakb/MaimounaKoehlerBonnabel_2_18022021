@@ -101,7 +101,7 @@ body {
 }
 
 #bloc_page {
-  width: 900px;
+  width: 1000px;
   margin: auto;
 }
 
@@ -114,8 +114,8 @@ h2 {
   font-style: normal;
 }
 
-li {
-  list-style: none;
+main p {
+  font-size: small;
 }
 
 /*HEADER*/
@@ -127,7 +127,7 @@ li {
 
 #menu {
   /*Revoir la taille et les marges*/
-  width: 300px;
+  width: 30%;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -140,13 +140,24 @@ li {
   font-weight: bold;
 }
 
+#lieu {
+  height: auto;
+  text-align: left;
+  font-size: medium;
+  font-weight: bold;
+  color: black;
+  padding: 3px 10px 3px 3px;
+  border: 1px #f2f2f2 solid;
+}
+
+/*Contient tous les éléments filtres de la ligne*/
 #filtres {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 700px;
-  height: 40px;
-  font-size: medium;
+  height: auto;
+  padding: 0px;
   font-weight: bold;
   /*border: 1px black solid;*/
 }
@@ -157,9 +168,9 @@ li {
 }
 
 .filtre {
-  height: 30px;
+  height: auto;
   text-align: left;
-  padding-right: 10px;
+  padding: 3px 10px 3px 3px;
   border: 2px #f2f2f2 solid;
   border-radius: 20px;
 }
@@ -168,8 +179,9 @@ li {
 .child:before,
 .heart:before,
 .dog:before {
-  width: 20px;
-  height: 50px;
+  width: auto;
+  height: auto;
+  padding: auto;
   color: #0065fc;
   background-color: #deebff;
   border: 2px #deebff solid;
@@ -208,7 +220,12 @@ li {
 /*Espacement entre les deux blocs hébergements, conteneur hébergements à marseille
 POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 #hebergements_m {
+  width: 65%;
   margin-right: 20px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /*Contient juste les boutons hébergements à Marseille*/
@@ -216,13 +233,14 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /*align-content: space-between;*/
+  flex:auto;
+  margin-bottom: 20px;
 }
 
 /*TROUVER SOLUTION POUR L'ESPACEMENT DES BOUTONS*/
 .bouton_h {
-  width: 200px;
-  height: 100px;
+  width: 30%;
+  height: auto;
   margin: 0px 5px 10px 5px;
   border: 3px white solid;
   border-radius: 10px;
@@ -236,7 +254,23 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 }
 
 .bouton_h_p {
+  width: 100%;
   margin-bottom: 20px;
   border: 3px white solid;
   border-radius: 10px;
+
+}
+
+/*FOOTER*/
+/*Trouver comment faire pour que le background face toute la page*/
+#footer {
+  display: flex;
+  justify-content: space-between;
+  /*margin-right: 100px;*/
+  background-color: #f2f2f2;
+}
+
+.nav_footer {
+  display: flex;
+  flex-direction: column;
 }

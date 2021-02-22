@@ -270,6 +270,37 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   margin: 0px 5px 10px 5px;
   border: 3px white solid;
   border-radius: 10px;
+  
+}
+
+.auberge_cannebiere {
+  background-image: url(images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
+  background-size: cover;
+}
+
+.hotel_port {
+  background-image: url(images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg);
+  background-size: cover;
+}
+
+.hotel_mouettes {
+  background-image: url(images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg);
+  background-size: cover;
+}
+
+.hotel_mer {
+  background-image: url(images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
+  background-size: cover;
+}
+
+.auberge_panier {
+  background-image: url(images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg);
+  background-size: cover;
+}
+
+.hotel_amina {
+  background-image: url(images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg);
+  background-size: cover;
 }
 
 /*HEBERGEMENTS POPULAIRES*/
@@ -285,6 +316,24 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   border: 3px white solid;
   border-radius: 10px;
 
+}
+
+.hotel_soleilmatin {
+  background-image: url(images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.chambres_hotes_eau {
+  background-image: url(images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hotel_bleublanc {
+  background-image: url(images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /*FOOTER*/

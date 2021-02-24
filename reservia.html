@@ -9,14 +9,14 @@
   <body>
     <div id="bloc_page">
       <header id="header">
-        <header id="entete">
+        <div id="entete">
           <img src="images/logo/Reservia.svg" alt="logo" />
           <nav id="menu">
             <a href="#hebergements">Hébergements</a>
             <a href="#activites">Activités</a>
             <a href="#">S'inscrire</a>
           </nav>
-        </header>
+        </div>
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <p>En plein centre ville ou en pleine nature</p>
         <form method="post" action="traitement.php" id="formulaire">
@@ -26,17 +26,17 @@
               type="text"
               name="lieu"
               id="lieu"
-              placeholder="Marseille, France"
+              value="Marseille, France"
             />
             <label for="lieu" class="rechercher">Rechercher</label>
           </p>
         </form>
         <div id="filtres">
           <p class="filtres">Filtres</p>
-          <p class="filtre money">Économique</p>
-          <p class="filtre child">Familial</p>
-          <p class="filtre heart">Romantique</p>
-          <p class="filtre dog">Animaux autorisés</p>
+          <a href="#" class="filtre money">Économique</a>
+          <a href="#" class="filtre child">Familial</a>
+          <a href="#" class="filtre heart">Romantique</a>
+          <a href="#" class="filtre dog">Animaux autorisés</a>
         </div>
         <p class="infos">
           Plus de 500 logements sont disponibles dans cette ville
@@ -49,34 +49,52 @@
             <h1>Hébergements à Marseille</h1>
             <div class="hebergements">
               <div class="auberge_cannebiere bouton_h">
-                <h2>Auberge La Cannebière</h2>
-                <p>Nuit à partir de 25€</p>
-                <!--Ajouter les étoiles-->
+                <div class="image_cannebiere"></div>
+                <div class="description_h">
+                  <h2>Auberge La Cannebière</h2>
+                  <p>Nuit à partir de 25€</p>
+                  <!--Ajouter les étoiles-->
+                </div>
               </div>
               <div class="hotel_port bouton_h">
-                <h2>Hôtel du port</h2>
-                <p>Nuit à partir de 52€</p>
-                <!--Ajouter les étoiles-->
+                <div class="image_port"></div>
+                <div class="description_h">
+                  <h2>Hôtel du port</h2>
+                  <p>Nuit à partir de 52€</p>
+                  <!--Ajouter les étoiles-->
+                </div>
               </div>
               <div class="hotel_mouettes bouton_h">
-                <h2>Hôtel Les mouettes</h2>
-                <p>Nuit à partir de 76€</p>
-                <!--Ajouter les étoiles-->
+                <div class="image_mouettes"></div>
+                <div class="description_h">
+                  <h2>Hôtel Les mouettes</h2>
+                  <p>Nuit à partir de 76€</p>
+                  <!--Ajouter les étoiles-->
+                </div>
               </div>
               <div class="hotel_mer bouton_h">
-                <h2>Hôtel de la mer</h2>
-                <p>Nuit à partir de 46€</p>
-                <!--Ajouter les étoiles-->
+                <div class="image_mer"></div>
+                <div class="description_h">
+                  <h2>Hôtel de la mer</h2>
+                  <p>Nuit à partir de 46€</p>
+                  <!--Ajouter les étoiles-->
+                </div>
               </div>
               <div class="auberge_panier bouton_h">
-                <h2>Auberge Le Panier</h2>
-                <p>Nuit à partir de 23€</p>
-                <!--Ajouter les étoiles-->
+                <div class="image_panier"></div>
+                <div class="description_h">
+                  <h2>Auberge Le Panier</h2>
+                  <p>Nuit à partir de 23€</p>
+                  <!--Ajouter les étoiles-->
+                </div>
               </div>
               <div class="hotel_amina bouton_h">
-                <h2>Hôtel chez Amina</h2>
-                <p>Nuit à partir de 96€</p>
-                <!--Ajouter les étoiles-->
+                <div class="image_amina"></div>
+                <div class="description_h">
+                  <h2>Hôtel chez Amina</h2>
+                  <p>Nuit à partir de 96€</p>
+                  <!--Ajouter les étoiles-->
+                </div>
               </div>
             </div>
             <a href="#">Afficher plus</a>
@@ -88,16 +106,25 @@
             </header>
             <div class="hebergement_p">
               <div class="hotel_soleilmatin bouton_h_p">
-                <h2>Hôtel Le soleil du matin</h2>
-                <p>Nuit à partir de 128€</p>
+                <div class="image_soleilmatin"></div>
+                <div class="description_h_p">
+                  <h2>Hôtel Le soleil du matin</h2>
+                  <p>Nuit à partir de 128€</p>
+                </div>
               </div>
               <div class="chambres_hotes_eau bouton_h_p">
-                <h2>Au coeur de l'eau Chambres d'hôtes</h2>
-                <p>Nuit à partir de 71€</p>
+                <div class="image_eau"></div>
+                <div class="description_h_p">
+                  <h2>Au coeur de l'eau Chambres d'hôtes</h2>
+                  <p>Nuit à partir de 71€</p>
+                </div>
               </div>
               <div class="hotel_bleublanc bouton_h_p">
-                <h2>Hôtel Tout bleu et Blanc</h2>
-                <p>Nuit à partir de 68€</p>
+                <div class="image_bleublanc"></div>
+                <div class="description_h_p">
+                  <h2>Hôtel Tout bleu et Blanc</h2>
+                  <p>Nuit à partir de 68€</p>
+                </div>
               </div>
             </div>
           </section>

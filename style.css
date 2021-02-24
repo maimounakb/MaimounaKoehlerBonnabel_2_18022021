@@ -164,6 +164,7 @@ footer a {
   padding: 3px 10px 3px 10px;
 }
 
+
 /*barre de recherche du formulaire*/
 #lieu {
   height: auto;
@@ -195,7 +196,7 @@ footer a {
 .filtre {
   height: auto;
   text-align: left;
-  padding: 3px 10px 3px 3px;
+  padding: 5px 10px 5px 5px;
   border: 2px #f2f2f2 solid;
   border-radius: 20px;
 }
@@ -246,12 +247,16 @@ footer a {
 /*Espacement entre les deux blocs hébergements, conteneur hébergements à marseille
 POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 #hebergements_m {
-  width: 65%;
+  width: 60%;
   margin-right: 20px;
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+#hebergements_p {
+  flex-grow: 1;
 }
 
 /*Contient juste les boutons hébergements à Marseille*/
@@ -266,41 +271,61 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 /*TROUVER SOLUTION POUR L'ESPACEMENT DES BOUTONS*/
 .bouton_h {
   width: 30%;
-  height: auto;
+  height: 140px;
   margin: 0px 5px 10px 5px;
   border: 3px white solid;
   border-radius: 10px;
-  
 }
 
-.auberge_cannebiere {
+.auberge_cannebiere, .hotel_port, .hotel_mouettes, .hotel_mer, .auberge_panier, .hotel_amina {
+  display: flex;
+  flex-direction: column;
+}
+
+.description_h {
+  border-radius: 0px 0px 7px 7px;
+  background-color: white;
+  height: 40%;
+  padding: 5px;
+}
+
+.description_h h2, .description_h p, .description_h_p h2, .description_h_p p {
+  /*border: 1px black solid;*/
+  margin: 0px;
+  padding-top: 3px;
+  font-size: small;
+}
+
+
+.image_cannebiere, .image_port, .image_mouettes, .image_mer, .image_panier, .image_amina {
+  border-radius: 7px 7px 0px 0px;
+  background-size: cover;
+  background-position: center;
+  height: 60%;
+}
+
+.image_cannebiere {
   background-image: url(images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
-  background-size: cover;
 }
 
-.hotel_port {
+.image_port {
   background-image: url(images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg);
-  background-size: cover;
 }
 
-.hotel_mouettes {
+.image_mouettes {
   background-image: url(images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg);
-  background-size: cover;
 }
 
-.hotel_mer {
+.image_mer {
   background-image: url(images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
-  background-size: cover;
 }
 
-.auberge_panier {
+.image_panier {
   background-image: url(images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg);
-  background-size: cover;
 }
 
-.hotel_amina {
+.image_amina {
   background-image: url(images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg);
-  background-size: cover;
 }
 
 /*HEBERGEMENTS POPULAIRES*/
@@ -312,28 +337,39 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 
 .bouton_h_p {
   width: 100%;
+  height: 90px;;
   margin-bottom: 20px;
   border: 3px white solid;
   border-radius: 10px;
-
+}
+.hotel_soleilmatin, .chambres_hotes_eau, .hotel_bleublanc {
+  display: flex;
 }
 
-.hotel_soleilmatin {
+.description_h_p {
+  border-radius: 0px 7px 7px 0px;
+  background-color: white;
+  width: 60%;
+  padding: 5px;
+}
+
+.image_soleilmatin, .image_eau, .image_bleublanc {
+  border-radius: 7px 0px 0px 7px;
+  background-size: cover;
+  background-position: center;
+  width: 40%;
+}
+
+.image_soleilmatin {
   background-image: url(images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
-.chambres_hotes_eau {
+.image_eau {
   background-image: url(images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
+} 
 
-.hotel_bleublanc {
+.image_bleublanc {
   background-image: url(images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 /*FOOTER*/
@@ -343,6 +379,9 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   justify-content: space-between;
   /*margin-right: 100px;*/
   background-color: #f2f2f2;
+  background-position: bottom 0% right 0% left 0%;
+  background-size: 100%;
+
 }
 
 .nav_footer {

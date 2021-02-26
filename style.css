@@ -90,7 +90,6 @@
 
 .infos:before {
   content: "i";
-  margin-right: 5px;
 }
 
 .fleche:before {
@@ -258,44 +257,64 @@ header p {
   width: 70%;
   padding: 0px;
   font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
   /*border: 1px black solid;*/
 }
 
+/*Titre*/
 .filtres {
   /*margin: ;*/
   justify-content: center;
 }
 
+/*Bouton entier*/
 .filtre {
   height: 30px;
   /*text-align: left;*/
-  padding: 5px 10px 5px 5px;
+  padding: 5px 10px 5px 0px;
   border: 2px #f2f2f2 solid;
   border-radius: 20px;
+  border-left: none;
   display: flex;
   align-items: center;
 }
 
+.filtre h3 {
+  margin: 5px;
+}
+
+/*icones*/
 .money:before,
 .child:before,
 .heart:before,
 .dog:before {
-  width: 55%;
-  height: 100%;
+  width: 40px;
+  height: 40px;
   /*padding: auto;*/
   color: #0065fc;
   background-color: #deebff;
   border: 2px #deebff solid;
-  border-radius: 10px;
+  border-radius: 20px;
 }
+
+/*INFOS*/
+.infos {
+  display: flex;
+  align-items: center;
+  margin: 30px 0px 30px 0px;
+ }
 
 .infos:before {
   font-size: smaller;
   color: #0065fc;
-  padding: 3px 6px 3px 8px;
   border: 2px #f2f2f2 solid;
-  border-radius: 10px;
+  border-radius: 15px;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }
+
 
 /*MAIN*/
 
@@ -378,10 +397,11 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 /*Conteneur des étoiles*/
 .etoiles {
   display: flex;
+  /*align-items: center;*/
 }
 
 .star {
-  line-height: 100%;
+  /*line-height: 100%;*/
   /*border: 1px black solid;*/
 }
 

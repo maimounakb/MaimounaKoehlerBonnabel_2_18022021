@@ -55,6 +55,9 @@
   text-transform: none;
   line-height: 1;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
@@ -120,6 +123,7 @@ body {
 
 h1 {
   font-size: x-large;
+  margin: 0px;
 }
 
 h2 {
@@ -169,7 +173,7 @@ li {
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 #menu {
@@ -182,41 +186,49 @@ li {
   font-size: small;
 }
 
-/*Conteneur du conteneur COMPRENDRE QUOI FAIRE AVEC CA*/
-/*#formulaire {
-  font-size: medium;
-  font-weight: bold;
-  border: 2px black solid;
-}*/
+header p {
+  margin: 5px;
+}
 
-/*Conteneur des éléments du formulaire MAIS n'agit pas sur les caracteres de la barre de recherche*/
-#formulaire div {
-  /*font-size: small;*/
-  background: yellow;
-  width: 40%;
+/*FORMULAIRE*/
+/*toute la ligne*/
+#recherche {
   display: flex; 
   flex-wrap: nowrap;
-  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
   height: 50px;
+  /*background-color: aquamarine;*/
 }
 
+/*Conteneur icone et barre de recherche*/
+#formulaire {
+  display: flex; 
+  flex-wrap: nowrap;
+  /*align-items: center;*/
+  height: 50px;
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
+  border-right: none;
+  border-radius: 15px 0px 0px 15px;
+  overflow: hidden;
+}
+
+/*A RETRAVAILLER*/
 /*icone map*/
 .map_marker:before {
+  font-size: large;
   background-color: #f2f2f2;
-  /*height: auto;*/
-  padding: 5px 5px 5px 5px;
-  /*height: auto;*/
-  /*box-sizing: border-box;*/
+  padding: 17px;
 }
+
 
 /*barre de recherche du formulaire*/
 #lieu {
-  height: auto;
-  text-align: left;
   font-size: medium;
   font-weight: bold;
   color: black;
-  padding: 3px 3px 3px 3px;
+  padding-left: 5%;
   border: 1px #f2f2f2 solid;
 }
 
@@ -224,11 +236,19 @@ li {
 .rechercher {
   color: white;
   background-color: #0065fc;
-  padding: 3px 10px 3px 10px;
-  border-radius: 0px 10px 10px 0px;
-  height: auto;
+  border: 1px #0065fc solid;
+  border-radius: 0px 15px 15px 0px;
+  font-size: medium;
+  font-weight: bold;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0%;
+  width: 125px;
 }
 
+/*FILTRES*/
 
 /*Contient tous les éléments "filtre" de la ligne*/
 #filtres {
@@ -247,20 +267,22 @@ li {
 }
 
 .filtre {
-  height: auto;
-  text-align: left;
+  height: 30px;
+  /*text-align: left;*/
   padding: 5px 10px 5px 5px;
   border: 2px #f2f2f2 solid;
   border-radius: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .money:before,
 .child:before,
 .heart:before,
 .dog:before {
-  width: auto;
-  height: auto;
-  padding: auto;
+  width: 55%;
+  height: 100%;
+  /*padding: auto;*/
   color: #0065fc;
   background-color: #deebff;
   border: 2px #deebff solid;

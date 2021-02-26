@@ -19,21 +19,27 @@
         </div>
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <p>En plein centre ville ou en pleine nature</p>
-        <form method="post" action="traitement.php" id="formulaire">
-          <div>
-            <label for="lieu" class="map_marker"></label>
-            <input
-              type="text"
-              name="lieu"
-              id="lieu"
-              value="Marseille, France"
-            />
-            <label for="lieu" class="rechercher">Rechercher</label>
-          </div>
-        </form>
+        <ul id="recherche">
+          <li>
+            <form method="post" action="traitement.php" id="formulaire">
+              <label for="lieu" class="map_marker"></label>
+              <input
+                type="text"
+                name="lieu"
+                id="lieu"
+                value="Marseille, France"/>
+              <!--label for="lieu" class="rechercher">Rechercher</label-->
+            </form>
+          </li>
+          <li>
+            <a href="#" class="rechercher">Rechercher</a>
+          </li>
+        </ul>
         <div id="filtres">
           <p class="filtres">Filtres</p>
-          <a href="#" class="filtre money">Économique</a>
+          <a href="#" class="filtre money">
+            Économique
+          </a>
           <a href="#" class="filtre child">Familial</a>
           <a href="#" class="filtre heart">Romantique</a>
           <a href="#" class="filtre dog">Animaux autorisés</a>

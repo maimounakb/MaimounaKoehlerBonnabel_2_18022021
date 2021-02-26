@@ -97,6 +97,7 @@
 .star:before {
   content: "s";
   font-size: x-small;
+  font-weight: bold;
   /*margin: 0%;
   padding-top: 0%;*/
 }
@@ -111,18 +112,18 @@ body {
 }
 
 .conteneur {
-  width: 1000px;
+  width: 1250px;
   margin: auto;
   padding: 10px;
   /*Padding à revoir*/
 }
 
 h1 {
-  font-size: large;
+  font-size: x-large;
 }
 
 h2 {
-  font-size: medium;
+  font-size: large;
   font-style: normal;
 }
 
@@ -167,6 +168,8 @@ li {
 #entete {
   display: flex;
   justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 
 #menu {
@@ -194,6 +197,7 @@ li {
   display: flex; 
   flex-wrap: nowrap;
   align-items: center;
+  height: 50px;
 }
 
 /*icone map*/
@@ -231,8 +235,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 700px;
-  height: auto;
+  width: 70%;
   padding: 0px;
   font-weight: bold;
   /*border: 1px black solid;*/
@@ -280,15 +283,17 @@ li {
 #hebergements {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 /*Conteneurs "Hébergemenst à Marseille" et "Les plus populaires"*/
 #hebergements_m,
 #hebergements_p {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
   background-color: #f2f2f2;
-  border-radius: 10px;
+  border-radius: 20px;
   margin-bottom: 30px;
 }
 
@@ -296,7 +301,7 @@ li {
 POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 #hebergements_m {
   width: 60%;
-  margin-right: 20px;
+  margin-right: 40px;
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -323,11 +328,11 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 /*TROUVER SOLUTION POUR L'ESPACEMENT DES BOUTONS*/
 /*Caractéristiques d'un bouton*/
 .bouton_h {
-  width: 30%;
-  height: 140px;
-  margin: 0px 5px 10px 5px;
-  border: 3px white solid;
-  border-radius: 10px;
+  width: 29%;
+  height: 180px;
+  margin: 10px 10px 10px 10px;
+  border: 5px white solid;
+  border-radius: 20px;
   background-color: white;
   overflow: hidden;
   box-shadow: 1px 1px 10px #cecece;
@@ -342,7 +347,7 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 /*Bande blanche du bas pour la description des images*/
 .description_h {
   /*height: 40%;*/
-  padding: 5%;
+  padding: 5px 0px 10px 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -369,15 +374,15 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 /*Formatage du texte dans la description pour les hébergements à Marseille+les plus populaires*/
 .description_h h3, .description_h p, .description_h_p h3, .description_h_p p {
   /*border: 1px black solid;*/
-  margin: 0px;
-  font-size: small;
+  margin: 2px;
+  /*font-size: small;*/
 }
 
 /*Mise en page/positionnement des images dans les boutons*/
 .image_cannebiere, .image_port, .image_mouettes, .image_mer, .image_panier, .image_amina {
   background-size: cover;
   background-position: center;
-  height: 80px;
+  height: 110px;
 }
 
 /*Les différentes images de la section hébergements à Marseille*/
@@ -414,10 +419,10 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 
 /*Caractéristiques d'un article*/
 .article_h_p {
-  height: 100px;;
-  margin-bottom: 20px;
-  border: 3px white solid;
-  border-radius: 10px;
+  height: 125px;;
+  margin-bottom: 35px;
+  border: 5px white solid;
+  border-radius: 20px;
   background-color: white;
   overflow: hidden;
   display: flex;

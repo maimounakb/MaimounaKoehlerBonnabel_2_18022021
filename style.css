@@ -325,7 +325,7 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   border-radius: 10px;
   background-color: white;
   overflow: hidden;
-  /*box-shadow: 6px 6px 6px #f2f2f2;*/
+  box-shadow: 1px 1px 10px #cecece;
 }
 
 /*Organisation à l'intérieur des boutons*/
@@ -417,6 +417,7 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   overflow: hidden;
   display: flex;
   /*box-shadow: 6px 6px 6px #f2f2f2;*/
+  box-shadow: 1px 1px 10px #cecece;
 }
 
 .bouton_h_p {
@@ -452,24 +453,33 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 }
 
 /*ACTIVITES MARSEILLE*/
-#boutons_a {
-  margin-right: 20px;
+#activites_m {
   padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
+}
+
+.article_a {
+  display: flex;
+  flex-direction: column;
   background-color: white;
+  box-shadow: 1px 1px 10px #cecece;
+  border-radius: 10px;
   overflow: hidden;
 }
 
 .image_vieuxport, .image_pomegues, .image_frioul, .image_calanques, .image_garde, .image_longchamp {
   background-size: cover;
   background-position: center;
-  height: 60%;
+  min-height: 50px;
+  flex: 1
 }
 
 .description_a {
   padding: 5px;
   font-size: medium;
+  height: 20px;
+  margin: 0%;
 }
 
 .image_vieuxport {

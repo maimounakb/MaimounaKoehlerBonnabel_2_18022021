@@ -45,15 +45,16 @@
 .heart:before,
 .dog:before,
 .infos:before,
-.fleche:before {
+.fleche:before,
+.star:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
-  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
@@ -93,16 +94,27 @@
   content: "a";
 }
 
+.star:before {
+  content: "s";
+  font-size: x-small;
+  /*margin: 0%;
+  padding-top: 0%;*/
+}
+
+
 /*MISE EN PAGE PRINCIPALE (BODY ET BLOC PAGE)*/
 
 body {
   font-family: "Raleway";
   font-weight: normal;
+  margin: 0%;
 }
 
-#bloc_page {
+.conteneur {
   width: 1000px;
   margin: auto;
+  padding: 10px;
+  /*Padding à revoir*/
 }
 
 h1 {
@@ -114,18 +126,35 @@ h2 {
   font-style: normal;
 }
 
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+
 main p {
   font-size: small;
 }
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 footer a {
   color: black;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+ul {
+  padding: 0%;
+  margin: 0%;
+  list-style: none;
+}
+
+li {
+  /*list-style: none;*/
+
 }
 
 /*HEADER*/
@@ -145,25 +174,31 @@ footer a {
   font-size: small;
 }
 
-#formulaire {
+/*Conteneur du conteneur COMPRENDRE QUOI FAIRE AVEC CA*/
+/*#formulaire {
   font-size: medium;
   font-weight: bold;
   border: 2px black solid;
+}*/
+
+/*Conteneur des éléments du formulaire MAIS n'agit pas sur les caracteres de la barre de recherche*/
+#formulaire div {
+  /*font-size: small;*/
+  background: yellow;
+  width: 40%;
+  display: flex; 
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
+/*icone map*/
 .map_marker:before {
   background-color: #f2f2f2;
-  height: auto;
-  padding: 3px 3px 3px 3px;
-
+  /*height: auto;*/
+  padding: 5px 5px 5px 5px;
+  /*height: auto;*/
+  /*box-sizing: border-box;*/
 }
-
-.rechercher {
-  color: white;
-  background-color: #0065fc;
-  padding: 3px 10px 3px 10px;
-}
-
 
 /*barre de recherche du formulaire*/
 #lieu {
@@ -175,6 +210,16 @@ footer a {
   padding: 3px 3px 3px 3px;
   border: 1px #f2f2f2 solid;
 }
+
+/*Bouton rechercher*/
+.rechercher {
+  color: white;
+  background-color: #0065fc;
+  padding: 3px 10px 3px 10px;
+  border-radius: 0px 10px 10px 0px;
+  height: auto;
+}
+
 
 /*Contient tous les éléments "filtre" de la ligne*/
 #filtres {
@@ -242,8 +287,6 @@ footer a {
   margin-bottom: 30px;
 }
 
-/*HEBERGEMENTS MARSEILLE*/
-
 /*Espacement entre les deux blocs hébergements, conteneur hébergements à marseille
 POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 #hebergements_m {
@@ -261,12 +304,14 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   flex-grow: 1;
 }
 
+/*HEBERGEMENTS MARSEILLE*/
+
 /*Contient juste les boutons hébergements à Marseille*/
 .hebergements {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  flex:auto;
+  flex: auto;
   margin-bottom: 20px;
 }
 
@@ -278,38 +323,56 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   margin: 0px 5px 10px 5px;
   border: 3px white solid;
   border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+  /*box-shadow: 6px 6px 6px #f2f2f2;*/
 }
 
 /*Organisation à l'intérieur des boutons*/
-.auberge_cannebiere, .hotel_port, .hotel_mouettes, .hotel_mer, .auberge_panier, .hotel_amina {
+.article_h {
   display: flex;
   flex-direction: column;
 }
 
 /*Bande blanche du bas pour la description des images*/
 .description_h {
-  border-radius: 0px 0px 7px 7px;
-  background-color: white;
-  height: 40%;
+  /*height: 40%;*/
   padding: 5%;
-  /*display: flex;
-  flex-direction: column;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*Conteneur des étoiles*/
+.etoiles {
+  display: flex;
+}
+
+.star {
+  line-height: 100%;
+  /*border: 1px black solid;*/
+}
+
+.blue {
+  color: #0065fc;
+}
+
+.white {
+  color: #f2f2f2;
 }
 
 /*Formatage du texte dans la description pour les hébergements à Marseille+les plus populaires*/
 .description_h h2, .description_h p, .description_h_p h2, .description_h_p p {
   /*border: 1px black solid;*/
   margin: 0px;
-  padding-bottom: 3%;
   font-size: small;
 }
 
 /*Mise en page/positionnement des images dans les boutons*/
 .image_cannebiere, .image_port, .image_mouettes, .image_mer, .image_panier, .image_amina {
-  border-radius: 7px 7px 0px 0px;
   background-size: cover;
   background-position: center;
-  height: 60%;
+  height: 80px;
 }
 
 /*Les différentes images de la section hébergements à Marseille*/
@@ -344,31 +407,32 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   align-items: center;
 }
 
-/*Caractéristiques d'un bouton*/
-.bouton_h_p {
-  width: 100%;
+/*Caractéristiques d'un article*/
+.article_h_p {
   height: 100px;;
   margin-bottom: 20px;
   border: 3px white solid;
   border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  /*box-shadow: 6px 6px 6px #f2f2f2;*/
 }
 
-/*Organisation à l'intérieur des boutons*/
-.hotel_soleilmatin, .chambres_hotes_eau, .hotel_bleublanc {
-  display: flex;
+.bouton_h_p {
+  /*width: 100%;*/
 }
 
 /*Bande blanche sur le côté pour la description des images*/
 .description_h_p {
-  border-radius: 0px 7px 7px 0px;
-  background-color: white;
   width: 60%;
   padding: 5%;
+  display: flex;
+  flex-direction: column;
 }
 
 /*Mise en page/positionnement des images dans les boutons*/
 .image_soleilmatin, .image_eau, .image_bleublanc {
-  border-radius: 7px 0px 0px 7px;
   background-size: cover;
   background-position: center;
   width: 40%;
@@ -393,18 +457,17 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
+  background-color: white;
+  overflow: hidden;
 }
 
 .image_vieuxport, .image_pomegues, .image_frioul, .image_calanques, .image_garde, .image_longchamp {
-  border-radius: 7px 7px 0px 0px;
   background-size: cover;
   background-position: center;
   height: 60%;
 }
 
 .description_a {
-  border-radius: 0px 0px 7px 7px;
-  background-color: white;
   padding: 5px;
   font-size: medium;
 }
@@ -436,13 +499,12 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 /*FOOTER*/
 /*Trouver comment faire pour que le background face toute la page*/
 #footer {
+  background-color: #f2f2f2;
+}
+
+#footer .conteneur {
   display: flex;
   justify-content: space-between;
-  /*margin-right: 100px;*/
-  background-color: #f2f2f2;
-  background-position: bottom 0% right 0% left 0%;
-  background-size: 100%;
-
 }
 
 .nav_footer {

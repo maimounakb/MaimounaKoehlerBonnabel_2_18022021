@@ -7,7 +7,7 @@
   </head>
 
   <body>
-    <div id="bloc_page">
+    <div class="conteneur">
       <header id="header">
         <div id="entete">
           <img src="images/logo/Reservia.svg" alt="logo" />
@@ -20,7 +20,7 @@
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <p>En plein centre ville ou en pleine nature</p>
         <form method="post" action="traitement.php" id="formulaire">
-          <p>
+          <div>
             <label for="lieu" class="map_marker"></label>
             <input
               type="text"
@@ -29,7 +29,7 @@
               value="Marseille, France"
             />
             <label for="lieu" class="rechercher">Rechercher</label>
-          </p>
+          </div>
         </form>
         <div id="filtres">
           <p class="filtres">Filtres</p>
@@ -48,54 +48,122 @@
           <section id="hebergements_m">
             <h1>Hébergements à Marseille</h1>
             <div class="hebergements">
-              <div class="auberge_cannebiere bouton_h">
-                <div class="image_cannebiere"></div>
-                <div class="description_h">
-                  <h2>Auberge La Cannebière</h2>
-                  <p>Nuit à partir de 25€</p>
-                  <!--Ajouter les étoiles-->
-                </div>
-              </div>
-              <div class="hotel_port bouton_h">
-                <div class="image_port"></div>
-                <div class="description_h">
-                  <h2>Hôtel du port</h2>
-                  <p>Nuit à partir de 52€</p>
-                  <!--Ajouter les étoiles-->
-                </div>
-              </div>
-              <div class="hotel_mouettes bouton_h">
-                <div class="image_mouettes"></div>
-                <div class="description_h">
-                  <h2>Hôtel Les mouettes</h2>
-                  <p>Nuit à partir de 76€</p>
-                  <!--Ajouter les étoiles-->
-                </div>
-              </div>
-              <div class="hotel_mer bouton_h">
-                <div class="image_mer"></div>
-                <div class="description_h">
-                  <h2>Hôtel de la mer</h2>
-                  <p>Nuit à partir de 46€</p>
-                  <!--Ajouter les étoiles-->
-                </div>
-              </div>
-              <div class="auberge_panier bouton_h">
-                <div class="image_panier"></div>
-                <div class="description_h">
-                  <h2>Auberge Le Panier</h2>
-                  <p>Nuit à partir de 23€</p>
-                  <!--Ajouter les étoiles-->
-                </div>
-              </div>
-              <div class="hotel_amina bouton_h">
-                <div class="image_amina"></div>
-                <div class="description_h">
-                  <h2>Hôtel chez Amina</h2>
-                  <p>Nuit à partir de 96€</p>
-                  <!--Ajouter les étoiles-->
-                </div>
-              </div>
+              <a href="#" class="auberge_cannebiere bouton_h">
+                <article class="article_h">
+                  <div class="image_cannebiere"></div>
+                  <ul class="description_h">
+                    <li><h2>Auberge La Cannebière</h2></li>
+                    <li><p>Nuit à partir de <em>25€</em></p></li>
+                    <li>
+                      <ul class="etoiles">
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="white star"></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </article>
+              </a>
+              <a href="#" class="hotel_port bouton_h">
+                <article class="article_h">
+                  <div class="image_port"></div>
+                  <ul class="description_h">
+                    <li><h2>Hôtel du port</h2></li>
+                    <li>
+                      <p>Nuit à partir de 52<em>€</em></p>
+                    </li>
+                    <li>
+                      <ul class="etoiles">
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </article>
+              </a>
+              <a href="#" class="hotel_mouettes bouton_h">
+                <article class="article_h">
+                  <div class="image_mouettes"></div>
+                  <ul class="description_h">
+                    <li><h2>Hôtel Les mouettes</h2></li>
+                    <li>
+                      <p>Nuit à partir de 76<em>€</em></p>
+                    </li>
+                    <li>
+                      <ul class="etoiles">
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="white star"></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </article>
+              </a>
+              <a href="#" class="hotel_mer bouton_h">
+                <article class="article_h">
+                  <div class="image_mer"></div>
+                  <ul class="description_h">
+                    <li><h2>Hôtel de la mer</h2></li>
+                    <li>
+                      <p>Nuit à partir de 46<em>€</em></p>
+                    </li>
+                    <li>
+                      <ul class="etoiles">
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="white star"></li>
+                        <li class="white star"></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </article>
+              </a>
+              <a href="#" class="auberge_panier bouton_h">
+                <article class="article_h">
+                  <div class="image_panier"></div>
+                  <ul class="description_h">
+                    <li><h2>Auberge Le Panier</h2></li>
+                    <li>
+                      <p>Nuit à partir de <em>23€</em></p>
+                    </li>
+                    <li>
+                      <ul class="etoiles">
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="white star"></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </article>
+              </a>
+              <a href="#" class="hotel_amina bouton_h">
+                <article class="article_h">
+                  <div class="image_amina"></div>
+                  <ul class="description_h">
+                    <li><h2>Hôtel chez Amina</h2></li>
+                    <li><p>Nuit à partir de 96<em>€</em></p></li>
+                    <li>
+                      <ul class="etoiles">
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </article>
+              </a>
             </div>
             <a href="#">Afficher plus</a>
           </section>
@@ -105,27 +173,60 @@
               <div class="fleche"></div>
             </header>
             <div class="hebergement_p">
-              <div class="hotel_soleilmatin bouton_h_p">
-                <div class="image_soleilmatin"></div>
-                <div class="description_h_p">
-                  <h2>Hôtel Le soleil du matin</h2>
-                  <p>Nuit à partir de 128€</p>
-                </div>
-              </div>
-              <div class="chambres_hotes_eau bouton_h_p">
-                <div class="image_eau"></div>
-                <div class="description_h_p">
-                  <h2>Au coeur de l'eau Chambres d'hôtes</h2>
-                  <p>Nuit à partir de 71€</p>
-                </div>
-              </div>
-              <div class="hotel_bleublanc bouton_h_p">
-                <div class="image_bleublanc"></div>
-                <div class="description_h_p">
-                  <h2>Hôtel Tout bleu et Blanc</h2>
-                  <p>Nuit à partir de 68€</p>
-                </div>
-              </div>
+              <a href="#" class="hotel_soleilmatin">
+                <article class="article_h_p">
+                  <div class="image_soleilmatin"></div>
+                  <ul class="description_h_p">
+                    <li><h2>Hôtel Le soleil du matin</h2></li>
+                    <li><p>Nuit à partir de 128<em>€</em></p></li>
+                    <li>
+                      <ul class="etoiles">
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </article>
+              </a>
+              <a href="#" class="chambres_hotes_eau bouton_h_p">
+                <article class="article_h_p">
+                  <div class="image_eau"></div>
+                  <ul class="description_h_p">
+                    <li><h2>Au coeur de l'eau Chambres d'hôtes</h2></li>
+                    <li><p>Nuit à partir de 71<em>€</em></p></li>
+                    <li>
+                      <ul class="etoiles">
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="white star"></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </article>
+              </a>
+              <a href="#" class="hotel_bleublanc bouton_h_p">
+                <article class="article_h_p">
+                  <div class="image_bleublanc"></div>
+                  <ul class="description_h_p">
+                    <li><h2>Hôtel Tout bleu et Blanc</h2></li>
+                    <li><p>Nuit à partir de 68<em>€</em></p></li>
+                    <li>
+                      <ul class="etoiles">
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="blue star"></li>
+                        <li class="white star"></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </article>
+              </a>
             </div>
           </section>
         </section>
@@ -159,28 +260,26 @@
           </div>
         </section>
       </main>
-
-      <footer id="footer">
+    </div>
+    <footer id="footer">
+      <div class="conteneur">
         <nav class="nav_footer">
           <h2>A propos</h2>
           <a href="#">Fonctionnement du site</a>
           <a href="#">Conditions générales de vente</a>
           <a href="#">Données et confidentialité</a>
-
         </nav>
         <nav class="nav_footer">
           <h2>Nos hébergements</h2>
           <a href="#">Charte qualité</a>
           <a href="#">Soumettre votre hôtel</a>
-
         </nav>
         <nav class="nav_footer">
           <h2>Assistance</h2>
           <a href="#">Centre d'aide</a>
           <a href="#">Nous contacter</a>
-
         </nav>
-      </footer>
-    </div>
+      </div>
+    </footer>
   </body>
 </html>

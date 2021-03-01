@@ -100,8 +100,6 @@
   content: "s";
   font-size: x-small;
   font-weight: bold;
-  /*margin: 0%;
-  padding-top: 0%;*/
 }
 
 
@@ -115,10 +113,9 @@ body {
 }
 
 .conteneur {
-  width: 1250px;
+  max-width: 1250px;
   margin: auto;
-  padding: 10px;
-  /*Padding à revoir*/
+  padding: 20px;
 }
 
 /*Titres*/
@@ -165,7 +162,6 @@ footer a {
   padding-bottom: 5px;
 }
 
-
 /*HEADER*/
 
 #entete {
@@ -178,10 +174,14 @@ footer a {
 #menu {
   /*Revoir la taille et les marges*/
   width: 30%;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   font-style: normal;
+}
+
+#menu a {
+  margin: 10px;
 }
 
 .menu_hebergements, .menu_inscrire {
@@ -261,6 +261,7 @@ header p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   width: 70%;
   padding: 0px;
   font-weight: bold;
@@ -349,9 +350,10 @@ header p {
 POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 #hebergements_m {
   width: 60%;
-  margin-right: 40px;
   padding-bottom: 30px;
+  margin-right: 35px;
   justify-content: space-between;
+  flex-grow: 2;
 }
 
 /*taille du bloc hébergements populaires 
@@ -373,7 +375,7 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 /*TROUVER SOLUTION POUR L'ESPACEMENT DES BOUTONS*/
 /*Caractéristiques d'un bouton*/
 .bouton_h {
-  width: 29%;
+  min-width: 220px;
   height: 180px;
   margin: 0px 10px 20px 10px;
   border: 5px white solid;
@@ -462,16 +464,23 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   align-items: center;
 }
 
+/*Conteneur des articles hébergements populaires*/
+.hebergements_p {
+  display: flex;
+  flex-direction: column;
+}
+
 /*Caractéristiques d'un article*/
 .article_h_p {
   height: 125px;
+  max-width: 330px;
+  min-width: 320px;;
   margin-bottom: 30px;
   border: 5px white solid;
   border-radius: 20px;
   background-color: white;
   overflow: hidden;
   display: flex;
-  /*box-shadow: 6px 6px 6px #f2f2f2;*/
   box-shadow: 1px 1px 10px #cecece;
 }
 
@@ -519,7 +528,8 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   justify-content: space-between;
   flex-flow: column wrap;
   align-content:space-between;
-  height: 400px;
+  max-height: 400px;
+  box-sizing: border-box;
 }
 
 .article_a {
@@ -530,13 +540,12 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   border-radius: 20px;
   overflow: hidden;
   min-width: 280px;
-  /*width: 250px;*/
 }
 
 .image_vieuxport, .image_pomegues, .image_frioul, .image_calanques, .image_garde, .image_longchamp {
   background-size: cover;
   background-position: center;
-  min-height: 50px;
+  min-height: 60px;
   flex: 1;
 }
 
@@ -597,6 +606,7 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 /*Trouver comment faire pour que le background face toute la page*/
 #footer {
   background-color: #f2f2f2;
+  min-width: 100%;
 }
 
 #footer .conteneur {
@@ -607,4 +617,113 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 .nav_footer {
   display: flex;
   flex-direction: column;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 1300px) {
+  .conteneur {
+    width: auto;
+  }
+
+  #hebergements_m {
+    max-width: 50%;
+  }
+
+  .hebergements {
+    justify-content: space-around;
+  }
+
+  .hebergements_p {
+    align-items: center;
+  }
+
+  #activites_m {
+    max-height: 1000px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #activites_m article {
+    height: 200px;
+    margin-bottom: 20px;
+  }
+
+}
+
+
+@media screen and (max-width: 1060px) {
+
+  .conteneur {
+    width: auto;
+  }
+
+  /*Les hébergements populaires passent au-dessus*/
+  #hebergements {
+    flex-direction: column;
+  }
+
+  #hebergements_m {
+    max-width: 100%;
+    width: 100%;
+    margin-right: 0px;
+    box-sizing: border-box;
+  }
+
+  #hebergements_p {
+    order: -1;
+    /*min-width: 60%;*/
+  }
+
+  .hebergements_p {
+    justify-content: space-around;
+  }
+
+  .bouton_h {
+    width: 40%;
+  }
+
+ /* .article_h_p {
+    width: 0%;
+  }*/
+
+}
+
+@media screen and (max-width: 950px) {
+ 
+  .hebergements_p {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  #activites_m {
+    max-height: none;
+  }
+
+  
+
+}
+
+@media screen and (max-width: 620px) {
+
+  #hebergements_m, #hebergements_p {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  #hebergements_m {
+    background-color: transparent;
+  }
+
+  .bouton_h {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    box-sizing: border-box;
+    min-height: 200px;
+  }
+
+
 }

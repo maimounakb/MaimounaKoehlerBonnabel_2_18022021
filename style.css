@@ -107,6 +107,7 @@
 
 /*MISE EN PAGE PRINCIPALE (BODY ET BLOC PAGE)*/
 
+/*Général*/
 body {
   font-family: "Raleway";
   font-weight: normal;
@@ -120,6 +121,7 @@ body {
   /*Padding à revoir*/
 }
 
+/*Titres*/
 h1 {
   font-size: x-large;
   margin: 0px;
@@ -135,6 +137,7 @@ h3 {
   font-style: normal;
 }
 
+/*Texte*/
 em {
   font-weight: bold;
   font-style: normal;
@@ -144,6 +147,13 @@ main p {
   font-size: small;
 }
 
+ul {
+  padding: 0%;
+  margin: 0%;
+  list-style: none;
+}
+
+/*Liens*/
 a {
   text-decoration: none;
   color: black;
@@ -155,16 +165,6 @@ footer a {
   padding-bottom: 5px;
 }
 
-ul {
-  padding: 0%;
-  margin: 0%;
-  list-style: none;
-}
-
-li {
-  /*list-style: none;*/
-
-}
 
 /*HEADER*/
 
@@ -182,7 +182,14 @@ li {
   display: flex;
   justify-content: space-between;
   font-style: normal;
-  font-size: small;
+}
+
+.menu_hebergements, .menu_inscrire {
+  color: #0065fc;
+}
+
+.menu_inscrire {
+  font-weight: bold;
 }
 
 header p {
@@ -344,8 +351,6 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   width: 60%;
   margin-right: 40px;
   padding-bottom: 30px;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -362,7 +367,6 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  flex: auto;
   margin-bottom: 20px;
 }
 
@@ -371,7 +375,7 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 .bouton_h {
   width: 29%;
   height: 180px;
-  margin: 10px 10px 10px 10px;
+  margin: 0px 10px 20px 10px;
   border: 5px white solid;
   border-radius: 20px;
   background-color: white;
@@ -387,7 +391,7 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 
 /*Bande blanche du bas pour la description des images*/
 .description_h {
-  /*height: 40%;*/
+  height: 60px;
   padding: 5px 0px 10px 10px;
   display: flex;
   flex-direction: column;
@@ -401,7 +405,7 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 }
 
 .star {
-  /*line-height: 100%;*/
+  /*line-height: 200%;*/
   /*border: 1px black solid;*/
 }
 
@@ -417,7 +421,6 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 .description_h h3, .description_h p, .description_h_p h3, .description_h_p p {
   /*border: 1px black solid;*/
   margin: 2px;
-  /*font-size: small;*/
 }
 
 /*Mise en page/positionnement des images dans les boutons*/
@@ -461,8 +464,8 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 
 /*Caractéristiques d'un article*/
 .article_h_p {
-  height: 125px;;
-  margin-bottom: 35px;
+  height: 125px;
+  margin-bottom: 30px;
   border: 5px white solid;
   border-radius: 20px;
   background-color: white;
@@ -482,6 +485,11 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   padding: 5%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+}
+
+.article_h_p ul {
+  justify-self: flex-end;
 }
 
 /*Mise en page/positionnement des images dans les boutons*/
@@ -509,6 +517,9 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
+  flex-flow: column wrap;
+  align-content:space-between;
+  height: 400px;
 }
 
 .article_a {
@@ -516,22 +527,46 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   flex-direction: column;
   background-color: white;
   box-shadow: 1px 1px 10px #cecece;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
+  min-width: 280px;
+  /*width: 250px;*/
 }
 
 .image_vieuxport, .image_pomegues, .image_frioul, .image_calanques, .image_garde, .image_longchamp {
   background-size: cover;
   background-position: center;
   min-height: 50px;
-  flex: 1
+  flex: 1;
+}
+
+.vieux_port article, .parc_calanques article {
+  height: 400px;
+}
+
+.fort_pomegues article {
+  height: 200px;
+}
+
+.iles_frioul article {
+  height: 150px;
+}
+
+.notredame_garde article {
+  height: 200px;
+}
+
+.parc_longchamp article {
+  height: 100px;
 }
 
 .description_a {
   padding: 5px;
   font-size: medium;
-  height: 20px;
-  margin: 0%;
+  height: 40px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .image_vieuxport {
@@ -543,7 +578,7 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 }
 
 .image_frioul {
-  background-image: url(images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
+  background-image: url(images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
 }
 
 .image_calanques {

@@ -8,8 +8,7 @@
   </head>
 
   <body>
-    <div class="conteneur">
-      <header id="header">
+      <header class="conteneur header">
         <div id="entete">
           <img src="images/logo/Reservia.svg" alt="logo" />
           <nav id="menu">
@@ -37,7 +36,7 @@
           </li>
         </ul>
         <div id="filtres">
-          <h3 class="filtres">Filtres</h3>
+          <h3 class="filtres_titre">Filtres</h3>
           <a href="#" class="filtre money">
             <h3>Économique</h3>
           </a>
@@ -57,13 +56,13 @@
       </header>
 
       <main>
-        <section id="hebergements">
+        <section class="conteneur hebergements">
           <section id="hebergements_m">
             <h2>Hébergements à Marseille</h2>
-            <div class="hebergements">
-              <a href="#" class="auberge_cannebiere bouton_h">
+            <section class="articles_h">
+              <a href="#" class="auberge_cannebiere">
                 <article class="article_h">
-                  <div class="image_cannebiere"></div>
+                  <div class="image_h cannebiere"></div>
                   <ul class="description_h">
                     <li><h3>Auberge La Cannebière</h3></li>
                     <li><p>Nuit à partir de <em>25€</em></p></li>
@@ -79,9 +78,9 @@
                   </ul>
                 </article>
               </a>
-              <a href="#" class="hotel_port bouton_h">
+              <a href="#" class="hotel_port">
                 <article class="article_h">
-                  <div class="image_port"></div>
+                  <div class="image_h port"></div>
                   <ul class="description_h">
                     <li><h3>Hôtel du port</h3></li>
                     <li>
@@ -99,9 +98,9 @@
                   </ul>
                 </article>
               </a>
-              <a href="#" class="hotel_mouettes bouton_h">
+              <a href="#" class="hotel_mouettes">
                 <article class="article_h">
-                  <div class="image_mouettes"></div>
+                  <div class="image_h mouettes"></div>
                   <ul class="description_h">
                     <li><h3>Hôtel Les mouettes</h3></li>
                     <li>
@@ -119,9 +118,9 @@
                   </ul>
                 </article>
               </a>
-              <a href="#" class="hotel_mer bouton_h">
+              <a href="#" class="hotel_mer">
                 <article class="article_h">
-                  <div class="image_mer"></div>
+                  <div class="image_h mer"></div>
                   <ul class="description_h">
                     <li><h3>Hôtel de la mer</h3></li>
                     <li>
@@ -139,9 +138,9 @@
                   </ul>
                 </article>
               </a>
-              <a href="#" class="auberge_panier bouton_h">
+              <a href="#" class="auberge_panier">
                 <article class="article_h">
-                  <div class="image_panier"></div>
+                  <div class="image_h panier"></div>
                   <ul class="description_h">
                     <li><h3>Auberge Le Panier</h3></li>
                     <li>
@@ -159,9 +158,9 @@
                   </ul>
                 </article>
               </a>
-              <a href="#" class="hotel_amina bouton_h">
+              <a href="#" class="hotel_amina">
                 <article class="article_h">
-                  <div class="image_amina"></div>
+                  <div class="image_h amina"></div>
                   <ul class="description_h">
                     <li><h3>Hôtel chez Amina</h3></li>
                     <li><p>Nuit à partir de 96<em>€</em></p></li>
@@ -177,7 +176,7 @@
                   </ul>
                 </article>
               </a>
-            </div>
+            </section>
             <a href="#">Afficher plus</a>
           </section>
           <section id="hebergements_p">
@@ -185,11 +184,11 @@
               <h2>Les plus populaires</h2>
               <div class="fleche"></div>
             </header>
-            <div class="hebergements_p">
-              <a href="#" class="hotel_soleilmatin bouton_h_p">
-                <article class="article_h_p">
-                  <div class="image_soleilmatin"></div>
-                  <ul class="description_h_p">
+            <div class="articles_p">
+              <a href="#" class="hotel_soleilmatin">
+                <article class="article_p">
+                  <div class="image_p soleilmatin"></div>
+                  <ul class="description_p">
                     <li><h3>Hôtel Le soleil du matin</h3></li>
                     <li><p>Nuit à partir de 128<em>€</em></p></li>
                     <li>
@@ -204,10 +203,10 @@
                   </ul>
                 </article>
               </a>
-              <a href="#" class="chambres_hotes_eau bouton_h_p">
-                <article class="article_h_p">
-                  <div class="image_eau"></div>
-                  <ul class="description_h_p">
+              <a href="#" class="chambres_hotes_eau">
+                <article class="article_p">
+                  <div class="image_p eau"></div>
+                  <ul class="description_p">
                     <li><h3>Au coeur de l'eau Chambres d'hôtes</h3></li>
                     <li><p>Nuit à partir de 71<em>€</em></p></li>
                     <li>
@@ -222,10 +221,10 @@
                   </ul>
                 </article>
               </a>
-              <a href="#" class="hotel_bleublanc bouton_h_p">
-                <article class="article_h_p">
-                  <div class="image_bleublanc"></div>
-                  <ul class="description_h_p">
+              <a href="#" class="hotel_bleublanc">
+                <article class="article_p">
+                  <div class="image_p bleublanc"></div>
+                  <ul class="description_p">
                     <li><h3>Hôtel Tout bleu et Blanc</h3></li>
                     <li><p>Nuit à partir de 68<em>€</em></p></li>
                     <li>
@@ -243,48 +242,48 @@
             </div>
           </section>
         </section>
-        <section id="activites">
+        <section id="activites" class="conteneur activites">
           <h2>Activités à Marseille</h2>
-          <div id="activites_m">
-            <a href="#" class="vieux_port bouton_a">
+          <section id="activites_m">
+            <a href="#" class="vieux_port">
               <article class="article_a">
-                <div class="image_vieuxport"></div>
+                <div class="image_a vieuxport"></div>
                 <h3 class="description_a">Vieux Port</h3>
               </article>
              </a>
-            <a href="#" class="fort_pomegues bouton_a">
+            <a href="#" class="fort_pomegues">
               <article class="article_a">
-                <div class="image_pomegues"></div>
+                <div class="image_a pomegues"></div>
                 <h3 class="description_a">Fort de Pomègues</h3>
               </article>
             </a>
-            <a href="#" class="iles_frioul bouton_a">
+            <a href="#" class="iles_frioul">
               <article class="article_a">
-                <div class="image_frioul"></div>
+                <div class="image_a frioul"></div>
                 <h3 class="description_a">Îles du Frioul</h3>
               </article>
             </a>
-            <a href="#" class="parc_calanques bouton_a">
+            <a href="#" class="parc_calanques">
               <article class="article_a">
-                <div class="image_calanques"></div>
+                <div class="image_a calanques"></div>
                 <h3 class="description_a">Parc National des calanques</h3>
               </article>
             </a>
-            <a href="#" class="notredame_garde bouton_a">
+            <a href="#" class="notredame_garde">
               <article class="article_a">
-                <div class="image_garde"></div>
+                <div class="image_a garde"></div>
                 <h3 class="description_a">Notre-Dame-de-la-Garde</h3>
               </article>
             </a>
-            <a href="#" class="parc_longchamp bouton_a">
+            <a href="#" class="parc_longchamp">
               <article class="article_a">
-                <div class="image_longchamp"></div>
+                <div class="image_a longchamp"></div>
                 <h3 class="description_a">Parc Longchamp</h3>
+              </article>
             </a>
-          </div>
+          </section>
         </section>
       </main>
-    </div>
     <footer id="footer">
       <div class="conteneur nav">
         <nav class="nav_footer">

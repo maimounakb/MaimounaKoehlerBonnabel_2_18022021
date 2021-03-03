@@ -200,7 +200,6 @@ header p {
 /*toute la ligne*/
 #recherche {
   display: flex; 
-  flex-wrap: nowrap;
   margin-top: 20px;
   margin-bottom: 20px;
   height: 50px;
@@ -218,6 +217,7 @@ header p {
   border-right: none;
   border-radius: 15px 0px 0px 15px;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 /*A RETRAVAILLER*/
@@ -246,12 +246,13 @@ header p {
   border-radius: 0px 15px 15px 0px;
   font-size: medium;
   font-weight: bold;
-  height: 46px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0%;
   width: 125px;
+  box-sizing: border-box;
 }
 
 /*FILTRES*/
@@ -259,28 +260,26 @@ header p {
 /*Contient tous les éléments "filtre" de la ligne*/
 #filtres {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  width: 70%;
   padding: 0px;
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 10px;
-  /*border: 1px black solid;*/
 }
 
 /*Titre*/
-.filtres {
-  /*margin: ;*/
+.filtres_titre {
   justify-content: center;
+  margin-right: 20px;
 }
 
 /*Bouton entier*/
 .filtre {
   height: 30px;
-  /*text-align: left;*/
   padding: 5px 10px 5px 0px;
+  margin-right: 20px;
+  margin-bottom: 10px;
   border: 2px #f2f2f2 solid;
   border-radius: 20px;
   border-left: none;
@@ -299,7 +298,6 @@ header p {
 .dog:before {
   width: 40px;
   height: 40px;
-  /*padding: auto;*/
   color: #0065fc;
   background-color: #deebff;
   border: 2px #deebff solid;
@@ -329,7 +327,7 @@ header p {
 /*HEBERGMENTS*/
 
 /*Contient les deux sections-conteneurs "hébergements à Marseille" et "les plus populaires"*/
-#hebergements {
+.hebergements {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -346,8 +344,7 @@ header p {
   margin-bottom: 30px;
 }
 
-/*Espacement entre les deux blocs hébergements, conteneur hébergements à marseille
-POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
+/*Espacement entre les deux blocs hébergements, conteneur hébergements à marseille*/
 #hebergements_m {
   width: 60%;
   padding-bottom: 30px;
@@ -356,39 +353,33 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   flex-grow: 2;
 }
 
-/*taille du bloc hébergements populaires 
-(en fonction du bloc hébergements_m, dans la section hebergements)*/
+/*taille du bloc hébergements populaires */
 #hebergements_p {
   flex-grow: 1;
 }
 
 /*HEBERGEMENTS MARSEILLE*/
 
-/*Contient juste les boutons hébergements à Marseille*/
-.hebergements {
+/*Section qui contient les articles hébergements à Marseille*/
+.articles_h {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
-/*TROUVER SOLUTION POUR L'ESPACEMENT DES BOUTONS*/
 /*Caractéristiques d'un bouton*/
-.bouton_h {
+.article_h {
+  display: flex;
+  flex-direction: column;
   min-width: 220px;
   height: 180px;
-  margin: 0px 10px 20px 10px;
+  margin-bottom: 20px;
   border: 5px white solid;
   border-radius: 20px;
   background-color: white;
   overflow: hidden;
   box-shadow: 1px 1px 10px #cecece;
-}
-
-/*Organisation à l'intérieur des boutons*/
-.article_h {
-  display: flex;
-  flex-direction: column;
 }
 
 /*Bande blanche du bas pour la description des images*/
@@ -400,60 +391,42 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   justify-content: space-between;
 }
 
-/*Conteneur des étoiles*/
-.etoiles {
-  display: flex;
-  /*align-items: center;*/
-}
-
-.star {
-  /*line-height: 200%;*/
-  /*border: 1px black solid;*/
-}
-
-.blue {
-  color: #0065fc;
-}
-
-.white {
-  color: #f2f2f2;
-}
 
 /*Formatage du texte dans la description pour les hébergements à Marseille+les plus populaires*/
-.description_h h3, .description_h p, .description_h_p h3, .description_h_p p {
+.description_h h3, .description_h p, .description_p h3, .description_p p {
   /*border: 1px black solid;*/
   margin: 2px;
 }
 
 /*Mise en page/positionnement des images dans les boutons*/
-.image_cannebiere, .image_port, .image_mouettes, .image_mer, .image_panier, .image_amina {
+.image_h {
   background-size: cover;
   background-position: center;
   height: 110px;
 }
 
 /*Les différentes images de la section hébergements à Marseille*/
-.image_cannebiere {
+.cannebiere {
   background-image: url(images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
 }
 
-.image_port {
+.port {
   background-image: url(images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg);
 }
 
-.image_mouettes {
+.mouettes {
   background-image: url(images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg);
 }
 
-.image_mer {
+.mer {
   background-image: url(images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
 }
 
-.image_panier {
+.panier {
   background-image: url(images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg);
 }
 
-.image_amina {
+.amina {
   background-image: url(images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg);
 }
 
@@ -462,19 +435,22 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 /*Conteneur des articles hébergements populaires*/
-.hebergements_p {
+.articles_p {
   display: flex;
   flex-direction: column;
 }
 
+#hebergements_p a {
+  width: 100%;
+}
+
 /*Caractéristiques d'un article*/
-.article_h_p {
+.article_p {
   height: 125px;
-  max-width: 330px;
-  min-width: 320px;;
   margin-bottom: 30px;
   border: 5px white solid;
   border-radius: 20px;
@@ -484,12 +460,8 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   box-shadow: 1px 1px 10px #cecece;
 }
 
-.bouton_h_p {
-  /*width: 100%;*/
-}
-
 /*Bande blanche sur le côté pour la description des images*/
-.description_h_p {
+.description_p {
   width: 60%;
   padding: 5%;
   display: flex;
@@ -497,28 +469,38 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   justify-content: flex-start;
 }
 
-.article_h_p ul {
-  justify-self: flex-end;
-}
-
 /*Mise en page/positionnement des images dans les boutons*/
-.image_soleilmatin, .image_eau, .image_bleublanc {
+.image_p {
   background-size: cover;
   background-position: center;
   width: 40%;
 }
 
 /*Les différentes images des hébergements populaires*/
-.image_soleilmatin {
+.soleilmatin {
   background-image: url(images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg);
 }
 
-.image_eau {
+.eau {
   background-image: url(images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg);
 } 
 
-.image_bleublanc {
+.bleublanc {
   background-image: url(images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg);
+}
+
+/*ETOILES*/
+/*Conteneur des étoiles*/
+.etoiles {
+  display: flex;
+}
+
+.blue {
+  color: #0065fc;
+}
+
+.white {
+  color: #f2f2f2;
 }
 
 /*ACTIVITES MARSEILLE*/
@@ -542,7 +524,7 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   min-width: 280px;
 }
 
-.image_vieuxport, .image_pomegues, .image_frioul, .image_calanques, .image_garde, .image_longchamp {
+.image_a {
   background-size: cover;
   background-position: center;
   min-height: 60px;
@@ -578,27 +560,27 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
   align-items: center;
 }
 
-.image_vieuxport {
+.vieuxport {
   background-image: url(images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
 }
 
-.image_pomegues {
+.pomegues {
   background-image: url(images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
 }
 
-.image_frioul {
+.frioul {
   background-image: url(images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
 }
 
-.image_calanques {
+.calanques {
   background-image: url(images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
 }
 
-.image_garde {
+.garde {
   background-image: url(images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg);
 }
 
-.image_longchamp {
+.longchamp {
   background-image: url(images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
 }
 
@@ -623,47 +605,92 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
 /*MEDIA QUERIES*/
 
 @media screen and (max-width: 1300px) {
+ 
+  /*GENERAL*/
   .conteneur {
     width: auto;
   }
 
+  /*HEBERGEMENTS*/
+  /*Section hebergements à Marseille*/
   #hebergements_m {
     max-width: 50%;
   }
 
-  .hebergements {
-    justify-content: space-around;
+  #hebergements_m a {
+    width: 40%;
   }
+  */
 
-  .hebergements_p {
+/*
+  .article_h {
+    min-width: 100%;
+  }
+  */
+
+  /*Section hébergements populaires*/
+  #hebergements_p {
     align-items: center;
   }
 
+  /*ACTIVITES*/
   #activites_m {
     max-height: 1000px;
     flex-direction: row;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
+  }
+
+  #activites_m a {
+    width: 30%;
   }
 
   #activites_m article {
-    height: 200px;
+    min-height: 200px;
+    height: auto;
+    min-width: auto;
     margin-bottom: 20px;
   }
 
 }
 
-
+/*
 @media screen and (max-width: 1060px) {
 
   .conteneur {
     width: auto;
   }
+}
+*/
+
+@media screen and (max-width: 950px) {
+ 
+  .conteneur {
+    width: auto;
+  }
+
+  /*FORMULAIRE*/
+  #recherche: {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #lieu {
+    
+  }
+
+  /*FILTRES*/
+  .filtres_titre {
+    width: 100%;
+  }
+
+  /*HEBERGEMENTS*/
 
   /*Les hébergements populaires passent au-dessus*/
   #hebergements {
     flex-direction: column;
   }
 
+  
   #hebergements_m {
     max-width: 100%;
     width: 100%;
@@ -676,38 +703,84 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
     /*min-width: 60%;*/
   }
 
-  .hebergements_p {
-    justify-content: space-around;
+  #hebergements_m a {
+    width: 100%;
   }
 
-  .bouton_h {
-    width: 40%;
-  }
-
- /* .article_h_p {
-    width: 0%;
-  }*/
-
-}
-
-@media screen and (max-width: 950px) {
- 
-  .hebergements_p {
+  #hebergements_p {
     align-items: center;
-    justify-content: space-between;
   }
 
-
+  /*ACTIVITES*/
   #activites_m {
     max-height: none;
   }
 
-  
+  #activites_m a {
+    width: 100%;
+  }
 
 }
 
+
 @media screen and (max-width: 620px) {
 
+  /*ENTETE*/
+  /*Trouver solution...*/
+  #entete {
+    display: block;
+  }
+
+  .logo {
+    float: left;
+    position: absolute;
+  }
+
+  #menu {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .menu_inscrire {
+    order: -2;
+    justify-self: right;
+    width: 50%;
+  }
+
+  /*
+  .menu_hebergements {
+    justify-self: left;
+    align-self: flex-end;
+  }
+*/
+  .menu_activites {
+    justify-self: right;
+    align-self:flex-end;
+    text-align: center;
+  }
+
+  .menu_hebergements, .menu_activites {
+    display: flex;
+    width: 40%;
+  }
+
+  /*FORMULAIRE*/
+  .rechercher {
+    width: 50px;
+    border-radius: 15px;
+  }
+
+  /*FILTRES*/
+  .filtre {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  /*HEBERGEMENTS*/
+  /*Suppression de la marge entre le bouton et son conteneur*/
   #hebergements_m, #hebergements_p {
     padding-left: 0px;
     padding-right: 0px;
@@ -717,13 +790,36 @@ POUR LA TAILLE:voir comment faire en fonction du bloc principal*/
     background-color: transparent;
   }
 
-  .bouton_h {
+/*TAILLES DES BOUTONS*/
+/*A modifier*/
+  .article_h {
     width: 100%;
+    min-width: 100%;
     margin-left: 0px;
     margin-right: 0px;
     box-sizing: border-box;
-    min-height: 200px;
+    min-height: auto;
+  }
+  
+  .article_p {
+    max-width: none;
+    min-width:auto;
+    box-sizing: border-box;
   }
 
+  .article_a {
+    width: 100%;
+  }
+
+  /*FOOTER*/
+  /*Menu du footer en colonnes*/
+  .nav {
+    flex-direction: column;
+  }
+
+  /*Séparation entre les différentes nav*/
+  .nav_footer {
+    margin-bottom: 20px;;
+  }
 
 }

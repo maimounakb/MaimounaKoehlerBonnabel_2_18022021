@@ -115,7 +115,8 @@ body {
 .conteneur {
   max-width: 1250px;
   margin: auto;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /*Titres*/
@@ -199,24 +200,26 @@ header p {
 /*FORMULAIRE*/
 /*toute la ligne*/
 #recherche {
-  display: flex; 
+  display: flex;
+  justify-content: space-between;
+  /*align-items: stretch;*/
+  flex-wrap: nowrap;
   margin-top: 20px;
   margin-bottom: 20px;
   height: 50px;
+  border: 1px #f2f2f2 solid;
+  overflow: hidden;
+  border-radius: 15px 15px 15px 15px;
+  max-width: 350px;
   /*background-color: aquamarine;*/
 }
 
 /*Conteneur icone et barre de recherche*/
 #formulaire {
-  display: flex; 
+  display: flex;
   flex-wrap: nowrap;
   /*align-items: center;*/
-  height: 50px;
-  margin-bottom: 20px;
-  background-color: #f2f2f2;
-  border-right: none;
-  border-radius: 15px 0px 0px 15px;
-  overflow: hidden;
+  /*height: 100%;*/
   box-sizing: border-box;
 }
 
@@ -235,24 +238,22 @@ header p {
   font-weight: bold;
   color: black;
   padding-left: 5%;
-  border: 1px #f2f2f2 solid;
+  border: none;
+  width: 180px;
+  overflow: hidden;
 }
 
 /*Bouton rechercher*/
 .rechercher {
   color: white;
   background-color: #0065fc;
-  border: 1px #0065fc solid;
-  border-radius: 0px 15px 15px 0px;
   font-size: medium;
   font-weight: bold;
-  height: 50px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0%;
   width: 125px;
-  box-sizing: border-box;
 }
 
 /*FILTRES*/
@@ -385,7 +386,7 @@ header p {
 /*Bande blanche du bas pour la description des images*/
 .description_h {
   height: 60px;
-  padding: 5px 0px 10px 10px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -394,8 +395,8 @@ header p {
 
 /*Formatage du texte dans la description pour les hébergements à Marseille+les plus populaires*/
 .description_h h3, .description_h p, .description_p h3, .description_p p {
-  /*border: 1px black solid;*/
-  margin: 2px;
+  margin: 1px;
+  line-height: 20px;
 }
 
 /*Mise en page/positionnement des images dans les boutons*/
@@ -463,10 +464,10 @@ header p {
 /*Bande blanche sur le côté pour la description des images*/
 .description_p {
   width: 60%;
-  padding: 5%;
+  padding: 15px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  /*justify-content: flex-start;*/
 }
 
 /*Mise en page/positionnement des images dans les boutons*/
@@ -493,6 +494,8 @@ header p {
 /*Conteneur des étoiles*/
 .etoiles {
   display: flex;
+  height: 20px;
+  align-items: center;
 }
 
 .blue {
@@ -618,15 +621,12 @@ header p {
   }
 
   #hebergements_m a {
-    width: 40%;
+    width: 45%;
   }
-  */
-
-/*
-  .article_h {
-    min-width: 100%;
+  
+  #hebergements_m article {
+    min-width: 203px;
   }
-  */
 
   /*Section hébergements populaires*/
   #hebergements_p {
@@ -653,14 +653,31 @@ header p {
 
 }
 
-/*
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1030px) {
 
-  .conteneur {
-    width: auto;
+  #hebergements_m {
+    max-width: 100%;
+    width: 100%;
+    margin-right: 0px;
+    box-sizing: border-box;
   }
+
+  #hebergements_p {
+    order: -1;
+    /*min-width: 60%;*/
+  }
+
+  .articles_p {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #hebergements_p a {
+    width: 32%;
+  }
+
+
 }
-*/
 
 @media screen and (max-width: 950px) {
  
@@ -668,15 +685,10 @@ header p {
     width: auto;
   }
 
-  /*FORMULAIRE*/
-  #recherche: {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  #lieu {
-    
-  }
+  /*
+  #recherche {
+    max-width: 290px;
+  }*/
 
   /*FILTRES*/
   .filtres_titre {
@@ -690,19 +702,6 @@ header p {
     flex-direction: column;
   }
 
-  
-  #hebergements_m {
-    max-width: 100%;
-    width: 100%;
-    margin-right: 0px;
-    box-sizing: border-box;
-  }
-
-  #hebergements_p {
-    order: -1;
-    /*min-width: 60%;*/
-  }
-
   #hebergements_m a {
     width: 100%;
   }
@@ -710,6 +709,15 @@ header p {
   #hebergements_p {
     align-items: center;
   }
+
+  .articles_p {
+    flex-direction: column;
+  }
+
+  #hebergements_p a {
+    width: 100%;
+  }
+
 
   /*ACTIVITES*/
   #activites_m {
@@ -719,7 +727,6 @@ header p {
   #activites_m a {
     width: 100%;
   }
-
 }
 
 
@@ -765,12 +772,6 @@ header p {
   .menu_hebergements, .menu_activites {
     display: flex;
     width: 40%;
-  }
-
-  /*FORMULAIRE*/
-  .rechercher {
-    width: 50px;
-    border-radius: 15px;
   }
 
   /*FILTRES*/
@@ -820,6 +821,32 @@ header p {
   /*Séparation entre les différentes nav*/
   .nav_footer {
     margin-bottom: 20px;;
+  }
+
+}
+
+
+@media screen and (max-width: 400px) {
+
+  /*FORMULAIRE*/
+  #recherche {
+    width: 100%;
+  }
+
+  .rechercher {
+    width: 50px;
+    border-radius: 15px;
+  }
+
+  .rechercher p {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+  #lieu {
+    max-width: 120px;
   }
 
 }

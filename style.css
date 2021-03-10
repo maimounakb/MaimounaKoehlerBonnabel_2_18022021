@@ -58,10 +58,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .map_marker:before {
@@ -305,12 +301,11 @@ header p {
 .child:before,
 .heart:before,
 .dog:before {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   color: #0065fc;
   background-color: #deebff;
-  border: 2px #deebff solid;
-  border-radius: 20px;
+  border-radius: 25px;
 }
 
 /*INFOS*/

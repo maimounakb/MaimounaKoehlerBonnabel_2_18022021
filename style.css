@@ -166,28 +166,28 @@ footer a {
 
 #entete {
   display: flex;
-  justify-content: flex-end;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.logo {
-  align-self: left;
+#entete img {
+  margin-right: auto;
 }
 
 #menu ul {
-  /*padding: 20px;
-  padding-right: 0px;*/
-  /*width: 350px;*/
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   font-style: normal;
-  align-content: center;
 }
 
-#entete a {
-  margin: 10px;
+#menu li {
+  display: flex;
+  justify-content: center;
+}
+
+#menu a {
+  margin-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .menu_hebergements,
@@ -199,6 +199,7 @@ footer a {
   font-weight: bold;
   padding-top: 20px;
   padding-bottom: 20px;
+  text-align: right;
 }
 
 header p {
@@ -752,32 +753,44 @@ header p {
   }
 
   .logo {
-    /*float: left;*/
-    /*position: absolute;*/
     width: 50%;
+    order: 1;
   }
 
   #menu {
     width: 100%;
-    /*padding-left: 0px;
-    padding-right: 0px;*/
+    order: 3;
   }
   
+  /*
   #menu ul {
     justify-content: space-around;
 }
+*/
+
+  #menu li {
+  width: 50%;
+  }
+
+  #menu a {
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+  }
 
   .menu_inscrire {
-    order: -1;
+    order: 2;
     width: 50%;
   }
 
-  /*
   .menu_hebergements {
-    justify-self: left;
-    align-self: flex-end;
+    border-bottom: 2px #0065fc solid;
   }
-*/
+
+  .menu_activites {
+    border-bottom: 2px #f2f2f2 solid;
+  }
+
 
 /*
   .menu_activites {
@@ -785,13 +798,6 @@ header p {
     align-self: flex-end;
     text-align: center;
   }
-
-  .menu_hebergements,
-  .menu_activites {
-    display: flex;
-    width: 40%;
-  }
-  */
 
   /*FILTRES*/
   .filtre {

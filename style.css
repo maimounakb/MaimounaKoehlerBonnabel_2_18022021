@@ -739,94 +739,25 @@ header p {
 
 }
 
-@media screen and (max-width: 620px) {
-  /*ENTETE*/
-  /*Trouver solution...*/
- 
-  #entete {
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    width: 50%;
-    order: 1;
-  }
-
-  #menu {
-    width: 100%;
-    order: 3;
-  }
-  
-  /*
-  #menu ul {
-    justify-content: space-around;
-}
-*/
-
-  #menu li {
-  width: 50%;
-  }
-
-  #menu a {
-    width: 100%;
-    text-align: center;
-    margin: 0px;
-  }
-
-  .menu_inscrire {
-    order: 2;
-    width: 50%;
-  }
-
-  .menu_hebergements {
-    border-bottom: 2px #0065fc solid;
-  }
-
-  .menu_activites {
-    border-bottom: 2px #f2f2f2 solid;
-  }
-
-
-/*
-  .menu_activites {
-    justify-self: right;
-    align-self: flex-end;
-    text-align: center;
-  }
-
-  /*FILTRES*/
-  .filtre {
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-
+@media screen and (max-width: 654px) {
   /*HEBERGEMENTS*/
-  /*Suppression de la marge entre le bouton et son conteneur*/
-  #hebergements_m,
-  #hebergements_p {
+  /*Arriere-plans*/
+  .hebergements {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  #hebergements_m, #hebergements_p {
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 0px;
   }
 
   #hebergements_m {
     background-color: transparent;
   }
 
-
-  /*TAILLES DES BOUTONS*/
-  /*A modifier*/
-  
-  /*
-  .article_h {
-    width: 100%;
-    min-width: 100%;
-    margin-left: 0px;
-    margin-right: 0px;
-    box-sizing: border-box;
-    min-height: auto;
-  }
-  */
-
+  /*Les boutons prennent toute la largeur*/
   #hebergements_m a {
     width: 100%;
   }
@@ -851,6 +782,58 @@ header p {
 
   .article_a {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+ 
+  /*ENTETE*/
+  #entete {
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    width: 50%;
+    order: 1;
+  }
+
+  #menu {
+    width: 100%;
+    order: 3;
+  }
+  
+  #menu li {
+  width: 50%;
+  }
+
+  #menu a {
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+  }
+
+  .menu_inscrire {
+    order: 2;
+    width: 50%;
+  }
+
+  .menu_hebergements {
+    border-bottom: 2px #0065fc solid;
+  }
+
+  .menu_activites {
+    border-bottom: 2px #f2f2f2 solid;
+  }
+
+  /*FILTRES*/
+  .filtre {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  /*HEBERGEMENTS*/
+#hebergements_m {
+    background-color: transparent;
   }
 
   /*FOOTER*/

@@ -334,7 +334,7 @@ header p {
 
 /*HEBERGMENTS*/
 
-/*Contient les deux sections-conteneurs "hébergements à Marseille" et "les plus populaires"*/
+/*Contient les deux div-conteneurs "hébergements à Marseille" et "les plus populaires"*/
 .hebergements {
   display: flex;
   justify-content: space-between;
@@ -368,7 +368,7 @@ header p {
 
 /*HEBERGEMENTS MARSEILLE*/
 
-/*Section qui contient les articles hébergements à Marseille*/
+/*Div qui contient les articles hébergements à Marseille*/
 .articles_h {
   display: flex;
   flex-wrap: wrap;
@@ -415,7 +415,7 @@ header p {
   height: 110px;
 }
 
-/*Les différentes images de la section hébergements à Marseille*/
+/*Les différentes images de la div hébergements à Marseille*/
 .cannebiere {
   background-image: url(images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
 }
@@ -646,7 +646,7 @@ header p {
   }
 
   /*HEBERGEMENTS*/
-  /*Section hebergements à Marseille*/
+  /*Div hebergements à Marseille*/
   #hebergements_m {
     max-width: 50%;
   }
@@ -659,7 +659,7 @@ header p {
     min-width: 203px;
   }
 
-  /*Section hébergements populaires*/
+  /*Div hébergements populaires*/
   #hebergements_p {
     align-items: center;
   }

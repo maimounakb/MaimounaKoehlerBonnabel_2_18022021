@@ -28,12 +28,12 @@
 
 /*icones*/
 @font-face {
-  font-family: "icomoon";
-  src: url("icones/icomoon.eot?n65aqm");
-  src: url("icones/icomoon.eot?n65aqm#iefix") format("embedded-opentype"),
-    url("icones/icomoon.ttf?n65aqm") format("truetype"),
-    url("icones/icomoon.woff?n65aqm") format("woff"),
-    url("icones/icomoon.svg?n65aqm#icomoon") format("svg");
+  font-family: 'icomoon';
+  src:  url('icones/icomoon.eot?7l4vh7');
+  src:  url('icones/icomoon.eot?7l4vh7#iefix') format('embedded-opentype'),
+    url('icones/icomoon.ttf?7l4vh7') format('truetype'),
+    url('icones/icomoon.woff?7l4vh7') format('woff'),
+    url('icones/icomoon.svg?7l4vh7#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -46,7 +46,8 @@
 .dog:before,
 .infos:before,
 .fleche:before,
-.star:before {
+.star:before,
+.search:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
   font-style: normal;
@@ -96,6 +97,10 @@
   content: "s";
   font-size: x-small;
   font-weight: bold;
+}
+
+.search:before {
+  content: "\72";
 }
 
 /*MISE EN PAGE PRINCIPALE (BODY ET BLOC PAGE)*/
@@ -248,7 +253,7 @@ header p {
 }
 
 /*Bouton rechercher*/
-.rechercher {
+.search {
   color: white;
   background-color: #0065fc;
   font-size: medium;
@@ -258,6 +263,10 @@ header p {
   align-items: center;
   justify-content: center;
   width: 125px;
+}
+
+.search:before {
+  display: none;
 }
 
 /*FILTRES*/
@@ -433,6 +442,10 @@ header p {
 
 .amina {
   background-image: url(images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg);
+}
+
+.afficher_plus {
+  font-weight: bold;
 }
 
 /*HEBERGEMENTS POPULAIRES*/
@@ -624,10 +637,11 @@ header p {
 
 #footer .conteneur {
   display: flex;
-  justify-content: space-between;
 }
 
 .nav_footer {
+  margin-right: 15px;
+  flex: 1 0 33%;
   display: flex;
   flex-direction: column;
 }
@@ -855,13 +869,17 @@ header p {
     width: 100%;
   }
 
-  .rechercher {
+  .search {
     width: 50px;
     border-radius: 15px;
   }
 
-  .rechercher p {
+  .search p {
     display: none;
+  }
+
+  .search:before {
+    display: contents;
   }
 }
 

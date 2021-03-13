@@ -1,0 +1,883 @@
+/* police, normal*/
+@font-face {
+  font-family: "Raleway";
+  src: url("polices/Raleway-Regular.eot");
+  src: url("polices/Raleway-Regular.eot?#iefix") format("embedded-opentype"),
+    url("polices/Raleway-Regular.woff2") format("woff2"),
+    url("polices/Raleway-Regular.woff") format("woff"),
+    url("polices/Raleway-Regular.ttf") format("truetype"),
+    url("polices/Raleway-Regular.svg#Raleway-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* police, gras*/
+@font-face {
+  font-family: "Raleway";
+  src: url("polices/Raleway-Bold.eot");
+  src: url("polices/Raleway-Bold.eot?#iefix") format("embedded-opentype"),
+    url("polices/Raleway-Bold.woff2") format("woff2"),
+    url("polices/Raleway-Bold.woff") format("woff"),
+    url("polices/Raleway-Bold.ttf") format("truetype"),
+    url("polices/Raleway-Bold.svg#Raleway-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*icones*/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('icones/icomoon.eot?7l4vh7');
+  src:  url('icones/icomoon.eot?7l4vh7#iefix') format('embedded-opentype'),
+    url('icones/icomoon.ttf?7l4vh7') format('truetype'),
+    url('icones/icomoon.woff?7l4vh7') format('woff'),
+    url('icones/icomoon.svg?7l4vh7#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.map_marker:before,
+.money:before,
+.child:before,
+.heart:before,
+.dog:before,
+.infos:before,
+.fleche:before,
+.star:before,
+.search:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map_marker:before {
+  content: "m";
+}
+
+.money:before {
+  content: "b";
+  margin-right: 5px;
+}
+
+.child:before {
+  content: "c";
+  margin-right: 5px;
+}
+
+.heart:before {
+  content: "h";
+  margin-right: 5px;
+}
+
+.dog:before {
+  content: "d";
+  margin-right: 5px;
+}
+
+.infos:before {
+  content: "i";
+}
+
+.fleche:before {
+  content: "a";
+}
+
+.star:before {
+  content: "s";
+  font-size: x-small;
+  font-weight: bold;
+}
+
+.search:before {
+  content: "\72";
+}
+
+/*MISE EN PAGE PRINCIPALE (BODY ET BLOC PAGE)*/
+
+/*Général*/
+body {
+  font-family: "Raleway";
+  font-weight: normal;
+  margin: 0%;
+}
+
+.conteneur {
+  max-width: 1250px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/*Titres*/
+h1 {
+  font-size: x-large;
+  margin: 0px;
+}
+
+h2 {
+  font-size: large;
+  font-style: normal;
+}
+
+h3 {
+  font-size: medium;
+  font-style: normal;
+}
+
+/*Texte*/
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+main p {
+  font-size: small;
+}
+
+ul {
+  padding: 0%;
+  margin: 0%;
+  list-style: none;
+}
+
+/*Liens*/
+a {
+  text-decoration: none;
+  color: black;
+}
+
+footer a {
+  color: black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/*HEADER*/
+
+#entete {
+  display: flex;
+  padding-bottom: 30px;
+}
+
+#entete img {
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+#menu ul {
+  display: flex;
+  font-style: normal;
+}
+
+#menu li {
+  display: flex;
+  justify-content: center;
+}
+
+#menu a {
+  padding: 20px;
+  padding-top: 50px;
+}
+
+.menu_hebergements,
+.menu_inscrire {
+  color: #0065fc;
+}
+
+.menu_hebergements {
+  border-top: 3px #0065fc solid;
+}
+
+.menu_inscrire {
+  font-weight: bold;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  text-align: right;
+}
+
+header p {
+  margin: 5px;
+}
+
+/*FORMULAIRE*/
+/*toute la ligne*/
+#recherche {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 50px;
+  max-width: 350px;
+  border: 1px #f2f2f2 solid;
+  border-radius: 15px 15px 15px 15px;
+  overflow: hidden;
+}
+
+/*Contient l'icone et la barre de recherche*/
+#formulaire {
+  display: flex;
+}
+
+/*icone map*/
+.map_marker {
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 50px;
+  width: 70px;
+  background-color: #f2f2f2;
+}
+
+/*barre de recherche du formulaire*/
+#lieu {
+  font-size: medium;
+  font-weight: bold;
+  color: black;
+  padding-left: 5%;
+  border: none;
+  width: 100%;
+}
+
+/*Bouton rechercher*/
+.search {
+  color: white;
+  background-color: #0065fc;
+  font-size: medium;
+  font-weight: bold;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 125px;
+  border-radius: 0px 15px 15px 0px;
+  box-sizing: border-box;
+  margin: 0px
+}
+
+/*Icone recherche*/
+.search:before {
+  display: none;
+}
+
+/*FILTRES*/
+
+/*Contient tous les éléments "filtre" de la ligne*/
+#filtres {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*Titre*/
+.filtres_titre {
+  justify-content: center;
+  margin-right: 20px;
+}
+
+/*Bouton entier*/
+.filtre {
+  height: 30px;
+  padding: 5px 10px 5px 0px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border: 2px #f2f2f2 solid;
+  border-radius: 20px;
+  border-left: none;
+  display: flex;
+  align-items: center;
+}
+
+.filtre h3 {
+  margin: 5px;
+}
+
+#filtres a:hover {
+  background-color: #deebff71;
+}
+
+
+/*icones*/
+.money:before,
+.child:before,
+.heart:before,
+.dog:before {
+  width: 44px;
+  height: 44px;
+  color: #0065fc;
+  background-color: #deebff;
+  border-radius: 25px;
+}
+
+/*INFOS*/
+.infos {
+  display: flex;
+  align-items: center;
+  margin: 30px 0px 30px 0px;
+}
+
+.infos:before {
+  font-size: smaller;
+  color: #0065fc;
+  border: 2px #f2f2f2 solid;
+  border-radius: 15px;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/*MAIN*/
+
+/*HEBERGMENTS*/
+
+/*Contient les deux div-conteneurs "hébergements à Marseille" et "les plus populaires"*/
+.hebergements {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/*Conteneurs "Hébergemenst à Marseille" et "Les plus populaires"*/
+#hebergements_m,
+#hebergements_p {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+/*Espacement entre les deux blocs hébergements, conteneur hébergements à marseille*/
+#hebergements_m {
+  width: 60%;
+  padding-bottom: 30px;
+  margin-right: 35px;
+  justify-content: space-between;
+  flex-grow: 2;
+}
+
+/*taille du bloc hébergements populaires */
+#hebergements_p {
+  flex-grow: 1;
+}
+
+/*HEBERGEMENTS MARSEILLE*/
+
+/*Div qui contient les articles hébergements à Marseille*/
+.articles_h {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/*Caractéristiques d'un bouton*/
+.article_h {
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+  height: 180px;
+  margin-bottom: 30px;
+  border: 5px white solid;
+  border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 1px 1px 10px #cecece;
+}
+
+/*Bande blanche du bas pour la description des images*/
+.description_h {
+  height: 60px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*Formatage du texte dans la description pour les hébergements à Marseille+les plus populaires*/
+.description_h h3,
+.description_h p,
+.description_p h3,
+.description_p p {
+  margin: 1px;
+  line-height: 20px;
+}
+
+/*Mise en page/positionnement des images dans les boutons*/
+.image_h {
+  background-size: cover;
+  background-position: center;
+  height: 110px;
+}
+
+/*Les différentes images de la div hébergements à Marseille*/
+.cannebiere {
+  background-image: url(images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
+}
+
+.port {
+  background-image: url(images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg);
+}
+
+.mouettes {
+  background-image: url(images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg);
+}
+
+.mer {
+  background-image: url(images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
+}
+
+.panier {
+  background-image: url(images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg);
+}
+
+.amina {
+  background-image: url(images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg);
+}
+
+.afficher_plus {
+  font-weight: bold;
+}
+
+/*HEBERGEMENTS POPULAIRES*/
+#hebergements_p header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/*Conteneur des articles hébergements populaires*/
+.articles_p {
+  display: flex;
+  flex-direction: column;
+}
+
+#hebergements_p a {
+  width: 100%;
+}
+
+/*Caractéristiques d'un article*/
+.article_p {
+  height: 125px;
+  margin-bottom: 30px;
+  border: 5px white solid;
+  border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 1px 1px 10px #cecece;
+}
+
+/*Bande blanche sur le côté pour la description des images*/
+.description_p {
+  width: 60%;
+  padding: 10px 20px 10px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Mise en page/positionnement des images dans les boutons*/
+.image_p {
+  background-size: cover;
+  background-position: center;
+  width: 40%;
+}
+
+/*Les différentes images des hébergements populaires*/
+.soleilmatin {
+  background-image: url(images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg);
+}
+
+.eau {
+  background-image: url(images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg);
+}
+
+.bleublanc {
+  background-image: url(images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg);
+}
+
+/*ETOILES*/
+.note {
+  margin-top: auto;
+}
+
+/*Conteneur des étoiles*/
+.etoiles {
+  display: flex;
+  height: 20px;
+  align-items: center;
+  margin-top: auto;
+}
+
+.blue {
+  color: #0065fc;
+}
+
+.white {
+  color: #f2f2f2;
+}
+
+/*ACTIVITES MARSEILLE*/
+
+#activites_m {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column wrap;
+  align-content: space-between;
+  height: 460px;
+  box-sizing: border-box;
+}
+
+.article_a {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 1px 1px 10px #cecece;
+  border-radius: 20px;
+  overflow: hidden;
+  min-width: 275px;
+  margin-bottom: 40px;
+}
+
+.image_a {
+  background-size: cover;
+  background-position: center;
+  min-height: 60px;
+  flex: 1;
+}
+
+.vieux_port article,
+.parc_calanques article {
+  height: 400px;
+}
+
+.fort_pomegues article {
+  height: 210px;
+}
+
+.iles_frioul article {
+  height: 150px;
+}
+
+.notredame_garde article {
+  height: 170px;
+}
+
+.parc_longchamp article {
+  height: 190px;
+}
+
+.description_a {
+  padding: 5px;
+  font-size: medium;
+  height: 20px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.vieuxport {
+  background-image: url(images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
+  background-position: bottom 20%;
+}
+
+.pomegues {
+  background-image: url(images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
+}
+
+.frioul {
+  background-image: url(images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
+  background-position: top;
+}
+
+.calanques {
+  background-image: url(images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
+  background-position: top;
+}
+
+.garde {
+  background-image: url(images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg);
+  background-position: top;
+
+}
+
+.longchamp {
+  background-image: url(images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
+}
+
+/*FOOTER*/
+#footer {
+  background-color: #f2f2f2;
+  min-width: 100%;
+}
+
+#footer .conteneur {
+  display: flex;
+}
+
+.nav_footer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 15px;
+  flex: 1 0 33%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 1266px) {
+  /*GENERAL*/
+  .conteneur {
+    width: auto;
+  }
+
+  /*HEBERGEMENTS*/
+  /*Div hebergements à Marseille*/
+  #hebergements_m {
+    max-width: 50%;
+  }
+
+  #hebergements_m a {
+    width: 47%;
+  }
+
+  #hebergements_m article {
+    min-width: 203px;
+  }
+
+  /*Div hébergements populaires*/
+  #hebergements_p {
+    align-items: center;
+  }
+
+  /*ACTIVITES*/
+  #activites_m {
+    height: auto;
+    max-height: 1000px;
+    flex-direction: row;
+  }
+
+  #activites_m a {
+    width: 30%;
+  }
+
+  #activites_m article {
+    min-height: 200px;
+    height: auto;
+    min-width: auto;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  #hebergements_m {
+    max-width: 100%;
+    width: 100%;
+    margin-right: 0px;
+    box-sizing: border-box;
+  }
+
+  #hebergements_p {
+    order: -1;
+    flex-wrap: wrap;
+  }
+
+  .articles_p {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  #hebergements_p a {
+    width: 47%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .conteneur {
+    width: auto;
+  }
+
+  /*FILTRES*/
+  .filtres_titre {
+    width: 100%;
+  }
+
+  /*HEBERGEMENTS*/
+  #hebergements {
+    flex-direction: column;
+  }
+
+  #hebergements_p {
+    align-items: center;
+  }
+
+  /*ACTIVITES*/
+  #activites_m {
+    max-height: none;
+  }
+
+  #activites_m a {
+    width: 47%;
+  }
+}
+
+@media screen and (max-width: 654px) {
+  /*HEBERGEMENTS*/
+  /*Arriere-plans*/
+  .hebergements {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  #hebergements_m, #hebergements_p {
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 0px;
+    padding-bottom: 30px;
+    margin-bottom: 0px;
+  }
+
+  #hebergements_m {
+    background-color: transparent;
+  }
+
+  /*Les boutons prennent toute la largeur*/
+  #hebergements_m a {
+    width: 100%;
+  }
+
+  .articles_p {
+    flex-direction: column;
+  }
+
+  #hebergements_p a {
+    width: 100%;
+  }
+
+  .article_p {
+    max-width: none;
+    min-width: auto;
+    box-sizing: border-box;
+    height: 140px;
+    margin-bottom: 10px;
+  }
+
+  #activites_m a {
+    width: 100%;
+  }
+
+  .article_a {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+ 
+  /*ENTETE*/
+  #entete {
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    width: 50%;
+    order: 1;
+  }
+
+  #menu {
+    width: 100%;
+    order: 3;
+  }
+  
+  #menu li {
+  width: 50%;
+  }
+
+  #menu a {
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    padding-top: 20px;
+  }
+
+  .menu_inscrire {
+    order: 2;
+    width: 50%;
+  }
+
+  .menu_hebergements {
+    border-top: none;
+    border-bottom: 3px #0065fc solid;
+  }
+
+  .menu_activites {
+    border-bottom: 3px #f2f2f2 solid;
+  }
+
+  /*FILTRES*/
+  .filtre {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  /*HEBERGEMENTS*/
+#hebergements_m {
+    background-color: transparent;
+  }
+
+  /*FOOTER*/
+  /*Menu du footer en colonnes*/
+  .nav {
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+
+  /*Séparation entre les différentes nav*/
+  .nav_footer {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  
+  /*FORMULAIRE*/
+  #recherche {
+    width: 100%;
+  }
+
+  #lieu {
+    /*width: auto;*/
+    /*max-width:none;*/
+  }
+
+  .search {
+    width: 54px;
+    border-radius: 15px;
+  }
+
+  .search p {
+    display: none;
+  }
+
+  .search:before {
+    display: contents;
+  }
+}

@@ -167,12 +167,12 @@ footer a {
 
 #entete {
   display: flex;
-  padding-top: 30px;
   padding-bottom: 30px;
 }
 
 #entete img {
   margin-right: auto;
+  margin-top: 30px;
 }
 
 #menu ul {
@@ -186,9 +186,8 @@ footer a {
 }
 
 #menu a {
-  margin-right: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
+  padding-top: 50px;
 }
 
 .menu_hebergements,
@@ -196,10 +195,15 @@ footer a {
   color: #0065fc;
 }
 
+.menu_hebergements {
+  border-top: 3px #0065fc solid;
+}
+
 .menu_inscrire {
   font-weight: bold;
-  padding-top: 20px;
+  padding-top: 50px;
   padding-bottom: 20px;
+  padding-left: 20px;
   text-align: right;
 }
 
@@ -211,34 +215,29 @@ header p {
 /*toute la ligne*/
 #recherche {
   display: flex;
-  justify-content: space-between;
-  /*align-items: stretch;*/
-  flex-wrap: nowrap;
   margin-top: 20px;
   margin-bottom: 20px;
   height: 50px;
-  border: 1px #f2f2f2 solid;
-  overflow: hidden;
-  border-radius: 15px 15px 15px 15px;
   max-width: 350px;
-  /*background-color: aquamarine;*/
+  border: 1px #f2f2f2 solid;
+  border-radius: 15px 15px 15px 15px;
+  overflow: hidden;
 }
 
-/*Conteneur icone et barre de recherche*/
+/*Contient l'icone et la barre de recherche*/
 #formulaire {
   display: flex;
-  flex-wrap: nowrap;
-  /*align-items: center;*/
-  /*height: 100%;*/
-  box-sizing: border-box;
 }
 
-/*A RETRAVAILLER*/
 /*icone map*/
-.map_marker:before {
+.map_marker {
   font-size: large;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 50px;
+  width: 70px;
   background-color: #f2f2f2;
-  padding: 17px;
 }
 
 /*barre de recherche du formulaire*/
@@ -248,8 +247,7 @@ header p {
   color: black;
   padding-left: 5%;
   border: none;
-  width: 180px;
-  overflow: hidden;
+  width: 100%;
 }
 
 /*Bouton rechercher*/
@@ -258,13 +256,17 @@ header p {
   background-color: #0065fc;
   font-size: medium;
   font-weight: bold;
-  height: 100%;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 125px;
+  border-radius: 0px 15px 15px 0px;
+  box-sizing: border-box;
+  margin: 0px
 }
 
+/*Icone recherche*/
 .search:before {
   display: none;
 }
@@ -294,6 +296,7 @@ header p {
   padding: 5px 10px 5px 0px;
   margin-right: 20px;
   margin-bottom: 10px;
+  margin-top: 10px;
   border: 2px #f2f2f2 solid;
   border-radius: 20px;
   border-left: none;
@@ -304,6 +307,11 @@ header p {
 .filtre h3 {
   margin: 5px;
 }
+
+#filtres a:hover {
+  background-color: #deebff71;
+}
+
 
 /*icones*/
 .money:before,
@@ -377,7 +385,6 @@ header p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 20px;
 }
 
 /*Caractéristiques d'un bouton*/
@@ -386,7 +393,7 @@ header p {
   flex-direction: column;
   min-width: 220px;
   height: 180px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   border: 5px white solid;
   border-radius: 20px;
   background-color: white;
@@ -481,10 +488,9 @@ header p {
 /*Bande blanche sur le côté pour la description des images*/
 .description_p {
   width: 60%;
-  padding: 15px 20px;
+  padding: 10px 20px 10px 20px;
   display: flex;
   flex-direction: column;
-  /*justify-content: flex-start;*/
 }
 
 /*Mise en page/positionnement des images dans les boutons*/
@@ -508,11 +514,16 @@ header p {
 }
 
 /*ETOILES*/
+.note {
+  margin-top: auto;
+}
+
 /*Conteneur des étoiles*/
 .etoiles {
   display: flex;
   height: 20px;
   align-items: center;
+  margin-top: auto;
 }
 
 .blue {
@@ -525,35 +536,13 @@ header p {
 
 /*ACTIVITES MARSEILLE*/
 
-/*
 #activites_m {
-  padding-bottom: 30px;
-  display: flex;
-  justify-content: space-between;
-  flex-flow: column wrap;
-  align-content:space-between;
-  height: 400px;
-}
-
-.article_a {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  box-shadow: 1px 1px 10px #cecece;
-  border-radius: 20px;
-  overflow: hidden;
-  min-width: 280px;
-  /*width: 250px;*/
-/*}
-*/
-
-#activites_m {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   display: flex;
   justify-content: space-between;
   flex-flow: column wrap;
   align-content: space-between;
-  max-height: 400px;
+  height: 460px;
   box-sizing: border-box;
 }
 
@@ -564,7 +553,8 @@ header p {
   box-shadow: 1px 1px 10px #cecece;
   border-radius: 20px;
   overflow: hidden;
-  min-width: 280px;
+  min-width: 275px;
+  margin-bottom: 40px;
 }
 
 .image_a {
@@ -580,7 +570,7 @@ header p {
 }
 
 .fort_pomegues article {
-  height: 200px;
+  height: 210px;
 }
 
 .iles_frioul article {
@@ -588,17 +578,17 @@ header p {
 }
 
 .notredame_garde article {
-  height: 200px;
+  height: 170px;
 }
 
 .parc_longchamp article {
-  height: 100px;
+  height: 190px;
 }
 
 .description_a {
   padding: 5px;
   font-size: medium;
-  height: 40px;
+  height: 20px;
   margin: 10px;
   display: flex;
   align-items: center;
@@ -606,6 +596,7 @@ header p {
 
 .vieuxport {
   background-image: url(images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
+  background-position: bottom 20%;
 }
 
 .pomegues {
@@ -614,14 +605,18 @@ header p {
 
 .frioul {
   background-image: url(images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
+  background-position: top;
 }
 
 .calanques {
   background-image: url(images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
+  background-position: top;
 }
 
 .garde {
   background-image: url(images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg);
+  background-position: top;
+
 }
 
 .longchamp {
@@ -629,7 +624,6 @@ header p {
 }
 
 /*FOOTER*/
-/*Trouver comment faire pour que le background face toute la page*/
 #footer {
   background-color: #f2f2f2;
   min-width: 100%;
@@ -640,6 +634,8 @@ header p {
 }
 
 .nav_footer {
+  margin-top: 30px;
+  margin-bottom: 30px;
   margin-right: 15px;
   flex: 1 0 33%;
   display: flex;
@@ -648,7 +644,7 @@ header p {
 
 /*MEDIA QUERIES*/
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1266px) {
   /*GENERAL*/
   .conteneur {
     width: auto;
@@ -675,9 +671,9 @@ header p {
 
   /*ACTIVITES*/
   #activites_m {
+    height: auto;
     max-height: 1000px;
     flex-direction: row;
-    /*justify-content: space-around;*/
   }
 
   #activites_m a {
@@ -688,7 +684,6 @@ header p {
     min-height: 200px;
     height: auto;
     min-width: auto;
-    margin-bottom: 20px;
   }
 }
 
@@ -702,7 +697,6 @@ header p {
 
   #hebergements_p {
     order: -1;
-  
     flex-wrap: wrap;
   }
 
@@ -722,18 +716,12 @@ header p {
     width: auto;
   }
 
-  /*
-  #recherche {
-    max-width: 290px;
-  }*/
-
   /*FILTRES*/
   .filtres_titre {
     width: 100%;
   }
 
   /*HEBERGEMENTS*/
-
   #hebergements {
     flex-direction: column;
   }
@@ -750,7 +738,6 @@ header p {
   #activites_m a {
     width: 47%;
   }
-
 }
 
 @media screen and (max-width: 654px) {
@@ -765,6 +752,8 @@ header p {
     padding-right: 20px;
     padding-left: 20px;
     border-radius: 0px;
+    padding-bottom: 30px;
+    margin-bottom: 0px;
   }
 
   #hebergements_m {
@@ -788,6 +777,8 @@ header p {
     max-width: none;
     min-width: auto;
     box-sizing: border-box;
+    height: 140px;
+    margin-bottom: 10px;
   }
 
   #activites_m a {
@@ -824,6 +815,7 @@ header p {
     width: 100%;
     text-align: center;
     margin: 0px;
+    padding-top: 20px;
   }
 
   .menu_inscrire {
@@ -832,11 +824,12 @@ header p {
   }
 
   .menu_hebergements {
-    border-bottom: 2px #0065fc solid;
+    border-top: none;
+    border-bottom: 3px #0065fc solid;
   }
 
   .menu_activites {
-    border-bottom: 2px #f2f2f2 solid;
+    border-bottom: 3px #f2f2f2 solid;
   }
 
   /*FILTRES*/
@@ -854,23 +847,29 @@ header p {
   /*Menu du footer en colonnes*/
   .nav {
     flex-direction: column;
+    padding-bottom: 30px;
   }
 
   /*Séparation entre les différentes nav*/
   .nav_footer {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   
   /*FORMULAIRE*/
   #recherche {
     width: 100%;
   }
 
+  #lieu {
+    /*width: auto;*/
+    /*max-width:none;*/
+  }
+
   .search {
-    width: 50px;
+    width: 54px;
     border-radius: 15px;
   }
 
@@ -880,11 +879,5 @@ header p {
 
   .search:before {
     display: contents;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  #lieu {
-    max-width: 120px;
   }
 }

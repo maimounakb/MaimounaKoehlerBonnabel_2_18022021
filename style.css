@@ -103,7 +103,7 @@
 /*MISE EN PAGE PRINCIPALE (BODY ET BLOC PAGE)*/
 
 /*Général*/
-body {
+body, #lieu {
   font-family: "Raleway";
   font-weight: normal;
   margin: 0px;
@@ -120,6 +120,7 @@ body {
 h1 {
   font-size: x-large;
   margin: 0px;
+  margin-top: 30px;
 }
 
 h2 {
@@ -164,12 +165,16 @@ footer a {
 
 /*HEADER*/
 
-#entete {
+.conteneur .entete {
+  padding: 0px;
+}
+
+.entete {
   display: flex;
   padding-bottom: 30px;
 }
 
-#entete img {
+.entete img {
   margin-right: auto;
   margin-top: 30px;
 }
@@ -185,7 +190,7 @@ footer a {
 }
 
 #menu a {
-  padding: 20px;
+  padding: 30px;
   padding-top: 50px;
 }
 
@@ -202,7 +207,7 @@ footer a {
   font-weight: bold;
   padding-top: 50px;
   padding-bottom: 20px;
-  padding-left: 20px;
+  padding-left: 30px;
   text-align: right;
 }
 
@@ -215,17 +220,18 @@ header p {
 #recherche {
   display: flex;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   height: 50px;
-  max-width: 420px;
-  border: 1px #f2f2f2 solid;
-  border-radius: 15px 15px 15px 15px;
-  overflow: hidden;
+  max-width: 450px;
 }
 
 /*Contient l'icone et la barre de recherche*/
 #formulaire {
   display: flex;
+  height: 48px;
+  border: 1px #f2f2f2 solid;
+  border-radius: 15px 0px 0px 15px;
+  overflow: hidden;
 }
 
 /*icone map*/
@@ -279,8 +285,6 @@ header p {
   flex-wrap: wrap;
   padding: 0px;
   font-weight: bold;
-  /*margin-top: 10px;
-  margin-bottom: 10px;*/
 }
 
 /*Titre*/
@@ -381,6 +385,11 @@ header p {
   font-size: x-large;
 }
 
+.hebergements h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 /*HEBERGEMENTS MARSEILLE*/
 
 /*Div qui contient les articles hébergements à Marseille*/
@@ -391,7 +400,7 @@ header p {
   margin-bottom: 15px;
 }
 
-/*Caractéristiques d'un bouton*/
+/*Caractéristiques d'un article*/
 .article_h {
   display: flex;
   flex-direction: column;
@@ -402,12 +411,11 @@ header p {
   border-radius: 20px;
   background-color: white;
   overflow: hidden;
-  box-shadow: 1px 1px 10px #cecece;
+  box-shadow: 1px 1px 10px #CACFD2;
 }
 
 /*Bande blanche du bas pour la description des images*/
 .description_h {
-  /*height: 80px;*/
   padding: 10px;
   padding-bottom: 5px;
   display: flex;
@@ -487,7 +495,7 @@ header p {
   background-color: white;
   overflow: hidden;
   display: flex;
-  box-shadow: 1px 1px 10px #cecece;
+  box-shadow: 1px 1px 10px #CACFD2;
 }
 
 /*Bande blanche sur le côté pour la description des images*/
@@ -563,7 +571,7 @@ header p {
   display: flex;
   flex-direction: column;
   background-color: white;
-  box-shadow: 1px 1px 10px #cecece;
+  box-shadow: 1px 1px 10px #CACFD2;
   border-radius: 20px;
   overflow: hidden;
   min-width: 300px;
@@ -609,31 +617,35 @@ header p {
 
 .vieuxport {
   background-image: url(images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
-  background-position: bottom 20%;
+  background-size: 220%;
+  background-position: 50% 20%;
 }
 
 .pomegues {
   background-image: url(images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
+  background-position-y: 42%;
 }
 
 .frioul {
   background-image: url(images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
-  background-position: top;
+  background-position-y: 20%;
 }
 
 .calanques {
   background-image: url(images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
   background-position: top;
+  background-size: 215%;
 }
 
 .garde {
   background-image: url(images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg);
-  background-position: top;
+  background-position-y: 5%;
 
 }
 
 .longchamp {
   background-image: url(images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
+  background-position-y: 15%;
 }
 
 /*FOOTER*/
@@ -662,7 +674,7 @@ header p {
 
 /*MEDIA QUERIES*/
 
-@media screen and (max-width: 1266px) {
+@media screen and (max-width: 1440px) {
   /*GENERAL*/
   .conteneur {
     width: auto;
@@ -703,9 +715,29 @@ header p {
     height: auto;
     min-width: auto;
   }
+
+  .vieuxport {
+    background-size: 100%;
+    background-position: 50% 15%;
+  }
+
+  .calanques {
+    background-size: 100%;
+    background-position-y: 18%;
+  }
+  
+  .garde {
+    background-position-y: 15%;
+  
+  }
+  
+  .longchamp {
+    background-position-y: 25%;
+  }
+
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1171px) {
   #hebergements_m {
     max-width: 100%;
     width: 100%;
@@ -729,9 +761,25 @@ header p {
   }
 }
 
+@media screen and (max-width: 1045px) {
+  /*FILTRES*/
+  .filtre {
+    margin-right: 10px;
+    margin-bottom: 15px;
+  }
+
+  .filtre h3 {
+    margin-left: 10px;
+    margin-right: 15px;
+  }
+
+}
+
 @media screen and (max-width: 950px) {
+
   .conteneur {
-    width: auto;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
   /*FILTRES*/
@@ -758,7 +806,8 @@ header p {
   }
 }
 
-@media screen and (max-width: 654px) {
+@media screen and (max-width: 730px) {
+  
   /*HEBERGEMENTS*/
   /*Arriere-plans*/
   .hebergements {
@@ -810,14 +859,33 @@ header p {
 
 @media screen and (max-width: 620px) {
  
-  /*ENTETE*/
-  #entete {
-    flex-wrap: wrap;
+  .conteneur {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .logo {
-    width: 50%;
-    order: 1;
+    margin-left: 20px;
+  }
+
+  .menu_inscrire {
+    margin-right: 20px;
+    padding-left: 0px;
+  }
+
+  h1, header p, .infos, #recherche, #filtres, #activites, .nav {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  
+  .infos {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  /*ENTETE*/
+  .entete {
+    flex-wrap: wrap;
   }
 
   #menu {
@@ -834,6 +902,7 @@ header p {
     text-align: center;
     margin: 0px;
     padding-top: 20px;
+    padding-bottom: 10px;
   }
 
   .menu_inscrire {
@@ -850,14 +919,8 @@ header p {
     border-bottom: 3px #f2f2f2 solid;
   }
 
-  /*FILTRES*/
-  .filtre {
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-
   /*HEBERGEMENTS*/
-#hebergements_m {
+  #hebergements_m {
     background-color: transparent;
   }
 
@@ -875,19 +938,27 @@ header p {
 }
 
 @media screen and (max-width: 450px) {
-  
   /*FORMULAIRE*/
   #recherche {
-    width: 100%;
+    max-width: 335px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border: 1px #f2f2f2 solid;
+    border-radius: 15px 15px 15px 15px;
+    overflow: hidden;
+  }
+
+  #formulaire {
+    border:none;
+    height: 50px;
   }
 
   #lieu {
-    /*width: auto;*/
-    /*max-width:none;*/
+    font-size: large;
   }
 
   .search {
-    width: 54px;
+    width: 50px;
     border-radius: 15px;
   }
 
@@ -898,4 +969,19 @@ header p {
   .search:before {
     display: contents;
   }
+
+  /*Marge articles*/
+  .article_h {
+    margin-bottom: 15px;
+  }
+
+  .article_a {
+    margin-bottom: 25px;
+  }
+
+  /*Marge footer*/
+  .nav_footer {
+    margin-left: 5px;
+  }
+
 }

@@ -194,14 +194,21 @@ footer a {
   padding-top: 50px;
 }
 
-.menu_hebergements,
+#menu a:hover {
+  padding-top: 47px;
+  border-top: 3px #0065fc solid;
+}
+
+.menu_hebergements:hover, .menu_activites:hover,
 .menu_inscrire {
   color: #0065fc;
 }
 
-.menu_hebergements {
+/*
+.menu_hebergements:hover, .menu_activites:hover {
   border-top: 3px #0065fc solid;
 }
+*/
 
 .menu_inscrire {
   font-weight: bold;
@@ -905,17 +912,19 @@ header p {
     padding-bottom: 10px;
   }
 
+  #menu a:hover {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-top: none;
+    border-bottom: 3px #0065fc solid;
+  }
+
   .menu_inscrire {
     order: 2;
     width: 50%;
   }
 
-  .menu_hebergements {
-    border-top: none;
-    border-bottom: 3px #0065fc solid;
-  }
-
-  .menu_activites {
+  .menu_activites, .menu_hebergements {
     border-bottom: 3px #f2f2f2 solid;
   }
 
